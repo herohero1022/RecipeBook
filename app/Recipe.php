@@ -10,4 +10,9 @@ class Recipe extends Model
     {
         return $this->belongsTo('App\User');
     }
+
+    public function materials()
+    {
+        return $this->hasMany('App\Material');
+    }
 }
