@@ -15,11 +15,11 @@ class RecipeController extends Controller
         return view('recipe.index',['items' => $items]);
     }
 
-    public function add()
+    public function step1()
     {
         $user = Auth::user();
         $recipes = Recipe::all();
-        return view('recipe.add',['recipes' => $recipes, 'user' => $user]);
+        return view('recipe.step1',['recipes' => $recipes, 'user' => $user]);
     }
 
     public function store(Request $request)
@@ -32,6 +32,11 @@ class RecipeController extends Controller
         $recipe->title = $request->title;
         $recipe->description = $request->description;
         $recipe->save();
-        return redirect('/recipe');
+        return redirect('/recipe/step2');
+    }
+
+    public function step2()
+    {
+        return view('recipe.step2');
     }
 }

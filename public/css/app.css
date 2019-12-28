@@ -3,7 +3,7 @@
 .home-wrapper {
   height: 100%;
   width: 100%;
-  background-color: #f8f8f8;
+  background-color: wheat;
 }
 
 .home-header {
@@ -58,7 +58,7 @@
 
 .home-header .header-contents-bottom-regibtn {
   height: 100%;
-  width: 80px;
+  width: 100px;
   background-color: red;
   color: white;
   text-align: center;
@@ -161,6 +161,81 @@
   height: 1200px;
   background-color: green;
   margin-right: 30px;
+}
+
+.add-main-contents {
+  width: 70%;
+  background-color: white;
+  margin: 40px auto 0px;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
+}
+
+.add-main-contents .add-content {
+  width: calc(100% - 40px);
+  height: calc(100% - 40px);
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-pack: center;
+          justify-content: center;
+}
+
+.add-main-contents .add-content-title {
+  width: 100%;
+  height: 60px;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 60px;
+  border-bottom: gray 1px solid;
+}
+
+.add-main-contents .add-content .add-content-box {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+}
+
+.add-main-contents .add-content .add-content-box .form-box {
+  width: 100%;
+  margin: 20px 0;
+}
+
+.add-main-contents .add-content .add-content-box .form-box-text {
+  font-size: 20px;
+  padding-bottom: 10px;
+}
+
+.add-main-contents .add-content .add-content-box .form-box .input-erea {
+  width: 100%;
+  height: 50px;
+  border-radius: 3px;
+  background-color: whitesmoke;
+  font-size: 18px;
+}
+
+.add-main-contents .add-content .add-content-box .add-submit-btn {
+  width: 200px;
+  height: 70px;
+  border-radius: 8px;
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 70px;
+  background-color: gainsboro;
+  color: white;
+  margin: 0 auto;
+  margin-top: 20px;
 }
 
 /*!

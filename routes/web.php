@@ -24,7 +24,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/user', 'UserController@show');
 
 Route::get('/recipe', 'RecipeController@index');
-Route::get('/recipe/add', 'RecipeController@add');
+Route::get('/recipe/step1', 'RecipeController@step1');
 Route::post('/recipe/store', 'RecipeController@store')->name('recipe.store');
+Route::get('/recipe/step2', 'RecipeController@step2');
 
 

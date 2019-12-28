@@ -26,33 +26,6 @@
         </div>
       </div>
     </div>
-    <div class="home-contents">
-      <div class="left-contents">
-      </div>
-      <div class="main-contents">
-        @foreach ($items as $item)
-        <div class="main-content">
-          <div class="main-content-image">
-          </div>
-          <div class="main-content-box">
-            <div class="content-box-title">
-              レシピタイトル
-            </div>
-            <div class="content-box-user">
-              testuser
-            </div>
-            <div class="content-box-text">
-              {{$item->name}}
-              {{$item->id}}
-            </div>
-          </div>
-        </div>
-        @endforeach
-      </div>
-      <div class="right-contents">
-        <h1>tesyto</h1>
-      </div>
-    </div>
   </div>
 </body>
 </html>
