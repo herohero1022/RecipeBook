@@ -43,6 +43,7 @@
             @foreach ($items as $item)
             <div class="content-box-text">
               {{$item->name}}
+              {{$item->id}}
             </div>
             @endforeach
           </div>

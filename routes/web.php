@@ -20,6 +20,11 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/test', 'HomeController@test');
 
 Route::get('/user', 'UserController@show');
+
+Route::get('/recipe', 'RecipeController@index');
+Route::get('/recipe/add', 'RecipeController@add');
+Route::post('/recipe/store', 'RecipeController@store')->name('recipe.store');
+
+
