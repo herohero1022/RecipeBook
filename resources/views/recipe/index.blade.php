@@ -30,20 +30,20 @@
       <div class="left-contents">
       </div>
       <div class="main-contents">
-        @foreach ($items as $item)
+        @foreach ($recipes as $recipe)
         <div class="main-content">
           <div class="main-content-image">
+            <img src="{{ asset('storage/' . $recipe->image) }}" alt="image" style="width: 120px;"/>
           </div>
           <div class="main-content-box">
             <div class="content-box-title">
-              レシピタイトル
+              {{$recipe->title}}
             </div>
             <div class="content-box-user">
-              testuser
+              by {{$recipe->user->name}}
             </div>
             <div class="content-box-text">
-              {{$item->name}}
-              {{$item->id}}
+              {{$recipe->description}}
             </div>
           </div>
         </div>

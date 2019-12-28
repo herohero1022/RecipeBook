@@ -11,8 +11,8 @@ class RecipeController extends Controller
 {
     public function index()
     {
-        $items = User::all();
-        return view('recipe.index',['items' => $items]);
+        $recipes = Recipe::all();
+        return view('recipe.index',['recipes' => $recipes]);
     }
 
     public function step1()
