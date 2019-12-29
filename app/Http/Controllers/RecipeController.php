@@ -44,6 +44,20 @@ class RecipeController extends Controller
 
     public function material_store(Request $request)
     {
-        return view('recipe.step2');
+        $number = count($request->ingredients);
+        eval(\Psy\sh());
+        for ($n = 0; $n < $number; $n++) {
+        $material = new Material;
+        $material->recipe_id = $request->recipe_id;
+        $material->ingredients = $request->ingredients[$n];
+        $material->quantity = $request->quantity[$n];
+        $material->save();
+        }
+        return redirect()->route('recipe.step3');
+    }
+
+    public function step3()
+    {
+        return view('recipe.step3');
     }
 }

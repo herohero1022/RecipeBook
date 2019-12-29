@@ -46,8 +46,8 @@
                 <div class="material-form-box">
                   <input type="hidden" name="recipe_id" value="{{$recipe_id}}"/>
                   <div class="material-input-box">
-                    <input type="text" name="ingredients" placeholder="例：鳥もも肉" class="input-erea">
-                    <input type="text" name="quantity" placeholder="例：250g" class="input-erea">
+                    <input type="text" name="ingredients[]" placeholder="例：鳥もも肉" class="input-erea">
+                    <input type="text" name="quantity[]" placeholder="例：250g" class="input-erea">
                     <div class="form-box-minus">
                       ー
                     </div>
