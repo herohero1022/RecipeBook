@@ -380,7 +380,7 @@
   margin-top: 20px;
 }
 
-.prosess-main-contents {
+.process-main-contents {
   width: 70%;
   background-color: white;
   margin: 40px auto 0px;
@@ -392,7 +392,7 @@
           align-items: center;
 }
 
-.prosess-main-contents .prosess-main-content {
+.process-main-contents .process-main-content {
   width: calc(100% - 40px);
   height: calc(100% - 40px);
   display: -webkit-box;
@@ -404,18 +404,18 @@
           justify-content: center;
 }
 
-.prosess-main-contents .prosess-main-content .prosess-main-content-title {
+.process-main-contents .process-main-content .process-main-content-title {
   height: 70px;
 }
 
-.prosess-main-contents .prosess-main-content .prosess-main-content-title .title-box {
+.process-main-contents .process-main-content .process-main-content-title .title-box {
   height: 100%;
   display: -webkit-box;
   display: flex;
   border-bottom: gray 1px solid;
 }
 
-.prosess-main-contents .prosess-main-content .prosess-main-content-title .title-box .recipe-title {
+.process-main-contents .process-main-content .process-main-content-title .title-box .recipe-title {
   height: 100%;
   font-size: 22px;
   font-weight: bold;
@@ -424,28 +424,28 @@
   margin-right: 10px;
 }
 
-.prosess-main-contents .prosess-main-content .prosess-main-content-title .title-box .recipe-user {
+.process-main-contents .process-main-content .process-main-content-title .title-box .recipe-user {
   font-size: 17px;
   color: darkgray;
   line-height: 70px;
 }
 
-.prosess-main-contents .prosess-main-content .prosess-main-content-recipe {
+.process-main-contents .process-main-content .process-main-content-recipe {
   display: -webkit-box;
   display: flex;
   margin: 20px 0;
 }
 
-.prosess-main-contents .prosess-main-content .prosess-main-content-recipe img {
+.process-main-contents .process-main-content .process-main-content-recipe img {
   height: 400px;
   margin-left: 100px;
 }
 
-.prosess-main-contents .prosess-main-content .prosess-main-content-recipe .material-table-box {
+.process-main-contents .process-main-content .process-main-content-recipe .material-table-box {
   margin-left: 200px;
 }
 
-.prosess-main-contents .prosess-main-content .prosess-main-content-recipe .material-table-box .material-table-text {
+.process-main-contents .process-main-content .process-main-content-recipe .material-table-box .material-table-text {
   font-size: 20px;
   font-weight: bold;
   color: orange;
@@ -453,16 +453,16 @@
   border-bottom: gray 1px solid;
 }
 
-.prosess-main-contents .prosess-main-content .prosess-main-content-recipe .material-table-box .material-table {
+.process-main-contents .process-main-content .process-main-content-recipe .material-table-box .material-table {
   width: 200px;
 }
 
-.prosess-main-contents .prosess-main-content .prosess-main-content-recipe .material-table-box .material-table tr {
+.process-main-contents .process-main-content .process-main-content-recipe .material-table-box .material-table tr {
   margin: 7px 0;
   border-bottom: gray 1px solid;
 }
 
-.prosess-main-contents .prosess-main-content .prosess-main-content-prosess {
+.process-main-contents .process-main-content .process-main-content-process {
   display: -webkit-box;
   display: flex;
   -webkit-box-orient: vertical;
@@ -471,26 +471,26 @@
   margin-bottom: 40px;
 }
 
-.prosess-main-contents .prosess-main-content .prosess-main-content-prosess .main-content-prosess-text {
+.process-main-contents .process-main-content .process-main-content-process .main-content-process-text {
   font-size: 20px;
   font-weight: bold;
   color: orange;
 }
 
-.prosess-main-contents .prosess-main-content .prosess-main-content-prosess .prosess-content-box {
+.process-main-contents .process-main-content .process-main-content-process .process-content-box {
   width: 100%;
 }
 
-.prosess-main-contents .prosess-main-content .prosess-main-content-prosess .prosess-content-box .prosess-form-box {
+.process-main-contents .process-main-content .process-main-content-process .process-content-box .process-form-box {
   margin: 10px 0;
 }
 
-.prosess-main-contents .prosess-main-content .prosess-main-content-prosess .prosess-content-box .prosess-form-box .prosess-input-box {
+.process-main-contents .process-main-content .process-main-content-process .process-content-box .process-form-box .process-input-box {
   display: -webkit-box;
   display: flex;
 }
 
-.prosess-main-contents .prosess-main-content .prosess-main-content-prosess .prosess-content-box .prosess-form-box .prosess-input-box .prosess-form-box-minus {
+.process-main-contents .process-main-content .process-main-content-process .process-content-box .process-form-box .process-input-box .process-form-box-minus {
   width: 35px;
   height: 40px;
   border-radius: 3px;
@@ -501,7 +501,7 @@
   text-align: center;
 }
 
-.prosess-main-contents .prosess-main-content .prosess-main-content-prosess .prosess-content-box .prosess-form-box .prosess-input-box .order-number {
+.process-main-contents .process-main-content .process-main-content-process .process-content-box .process-form-box .process-input-box .order-number {
   width: 30px;
   height: 40px;
   font-size: 22px;
@@ -512,12 +512,12 @@
   margin: 0 10px;
 }
 
-.prosess-main-contents .prosess-main-content .prosess-main-content-prosess .prosess-content-box .prosess-form-box .prosess-input-box .input-erea {
+.process-main-contents .process-main-content .process-main-content-process .process-content-box .process-form-box .process-input-box .input-erea {
   border-radius: 3px;
   background-color: whitesmoke;
 }
 
-.prosess-main-contents .prosess-main-content .prosess-main-content-prosess .prosess-content-box .form-box-plus {
+.process-main-contents .process-main-content .process-main-content-process .process-content-box .form-box-plus {
   width: 35px;
   height: 40px;
   border-radius: 3px;
@@ -528,7 +528,7 @@
   text-align: center;
 }
 
-.prosess-main-contents .prosess-main-content .prosess-main-content-prosess .prosess-content-box .prosess-submit-btn {
+.process-main-contents .process-main-content .process-main-content-process .process-content-box .process-submit-btn {
   width: 200px;
   height: 60px;
   border-radius: 8px;

@@ -49459,7 +49459,7 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 __webpack_require__(/*! ./recipe-material */ "./resources/js/recipe-material.js");
 
-__webpack_require__(/*! ./recipe-prosess */ "./resources/js/recipe-prosess.js");
+__webpack_require__(/*! ./recipe-process */ "./resources/js/recipe-process.js");
 
 window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
 /**
@@ -49634,18 +49634,18 @@ $('.form-box-minus').on('click', function () {
 
 /***/ }),
 
-/***/ "./resources/js/recipe-prosess.js":
+/***/ "./resources/js/recipe-process.js":
 /*!****************************************!*\
-  !*** ./resources/js/recipe-prosess.js ***!
+  !*** ./resources/js/recipe-process.js ***!
   \****************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-$('#prosess-form-box-plus').on('click', function () {
-  var inputCount = $('#prosess-form-erea .prosess-form-box').length;
+$('#process-form-box-plus').on('click', function () {
+  var inputCount = $('#process-form-erea .process-form-box').length;
 
   if (inputCount < 15) {
-    var element = $('#prosess-form-erea .prosess-form-box:last-child').clone(true); // 末尾をイベントごと複製
+    var element = $('#process-form-erea .process-form-box:last-child').clone(true); // 末尾をイベントごと複製
     // 複製したinputのクリア
 
     var inputList = element[0].querySelectorAll('input[type="text"], textarea');
@@ -49654,28 +49654,33 @@ $('#prosess-form-box-plus').on('click', function () {
       inputList[i].value = "";
     }
 
-    $('#prosess-form-erea .prosess-form-box').parent().append(element); // 末尾追加
+    $('#process-form-erea .process-form-box').parent().append(element); // 末尾追加
 
     $('.order-number').each(function (i) {
       $(this).text(i + 1);
-    });
+    }); // $('.input-erea-number').each(function(i){
+    //   var number = i + 1;
+    //   $('input:hidden[name="order"]').val(number);
+    //   $(this).val(number);
+    // });
+
     $('.input-erea-number').each(function (i) {
-      $(this).text(i + 1);
+      $(this).val(i + 1);
     });
   }
 }); // 削除
 
-$('.prosess-form-box-minus').on('click', function () {
+$('.process-form-box-minus').on('click', function () {
   // イベントごと複製しているのでonのselectorは未設定
-  var inputCount = $('#prosess-form-erea .prosess-form-box').length;
+  var inputCount = $('#process-form-erea .process-form-box').length;
 
   if (inputCount > 1) {
-    $(this).closest('.prosess-form-box').remove();
+    $(this).closest('.process-form-box').remove();
     $('.order-number').each(function (i) {
       $(this).text(i + 1);
     });
     $('.input-erea-number').each(function (i) {
-      $(this).text(i + 1);
+      $(this).val(i + 1);
     });
   }
 });

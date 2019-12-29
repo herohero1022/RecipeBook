@@ -27,9 +27,9 @@
           </div>
         </div>
       </div>
-      <div class="prosess-main-contents">
-        <div class="prosess-main-content">
-          <div class="prosess-main-content-title">
+      <div class="process-main-contents">
+        <div class="process-main-content">
+          <div class="process-main-content-title">
             <div class="title-box">
               <div class="recipe-title">
                 {{$recipe->title}}
@@ -39,7 +39,7 @@
               </div>
             </div>
           </div>
-          <div class="prosess-main-content-recipe">
+          <div class="process-main-content-recipe">
             <img src="{{ asset('storage/' . $recipe->image) }}" alt="image" style="width: 40%; hight: auto;"/>
             <div class="material-table-box">
               <div class="material-table-text">
@@ -55,32 +55,32 @@
               </table>
             </div>
           </div>
-          <div class="prosess-main-content-prosess">
-            <div class="main-content-prosess-text">
+          <div class="process-main-content-process">
+            <div class="main-content-process-text">
               作り方
             </div>
-            <form method="POST" action="{{ route('recipe.prosess_store') }}" class="prosess-content-box">
+            <form method="POST" action="{{ route('recipe.process_store') }}" class="process-content-box">
             @csrf
               <input type="hidden" name="recipe_id" value="{{$recipe->id}}"/>
-              <div class="prosess-form-erea" id="prosess-form-erea">
-                <div class="prosess-form-box">
-                  <div class="prosess-input-box">
-                    <div class="prosess-form-box-minus">
+              <div class="process-form-erea" id="process-form-erea">
+                <div class="process-form-box">
+                  <div class="process-input-box">
+                    <div class="process-form-box-minus">
                       ー
                     </div>
-                    <input type="hidden" name="order[]" class="input-erea-number">
+                    <input type="hidden" name="order[]" class="input-erea-number" value="">
                     <div class="order-number">
                       1
                     </div>
-                    <textarea name="proess" rows="4" cols="80" placeholder="ここに作り方を記入してください" class="input-erea"></textarea>
-                    {{-- <input type="texterea" name="prosess[]" placeholder="例：鳥もも肉" class="input-erea"> --}}
+                    <textarea name="process[]" rows="4" cols="80" placeholder="ここに作り方を記入してください" class="input-erea"></textarea>
+                    {{-- <input type="texterea" name="process[]" placeholder="例：鳥もも肉" class="input-erea"> --}}
                   </div>
                 </div>
               </div>
-              <div class="form-box-plus" id="prosess-form-box-plus">
+              <div class="form-box-plus" id="process-form-box-plus">
                 +
               </div>
-              <button type="submit" class="prosess-submit-btn">
+              <button type="submit" class="process-submit-btn">
                 作り方を登録する
               </button>
             </form>

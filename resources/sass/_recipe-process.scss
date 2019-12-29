@@ -1,17 +1,17 @@
-.prosess-main-contents {
+.process-main-contents {
   width: 70%;
   background-color: white;
   margin: 40px auto 0px;
   display: flex;
   justify-content: center;
   align-items: center;
-    .prosess-main-content {
+    .process-main-content {
       width: calc(100% - 40px);
       height: calc(100% - 40px);
       display: flex;
       flex-direction: column;
       justify-content: center;
-        .prosess-main-content-title {
+        .process-main-content-title {
           height: 70px;
             .title-box {
               height: 100%;
@@ -32,7 +32,7 @@
                 }
             }
         }
-        .prosess-main-content-recipe {
+        .process-main-content-recipe {
           display: flex;
           margin: 20px 0;
             img {
@@ -57,22 +57,22 @@
                 }
             }
         }
-        .prosess-main-content-prosess {
+        .process-main-content-process {
           display: flex;
           flex-direction: column;
           margin-bottom: 40px;
-            .main-content-prosess-text {
+            .main-content-process-text {
               font-size: 20px;
               font-weight: bold;
               color: orange;
             }
-            .prosess-content-box {
+            .process-content-box {
               width: 100%;
-                .prosess-form-box {
+                .process-form-box {
                   margin: 10px 0;
-                    .prosess-input-box {
+                    .process-input-box {
                       display: flex;
-                        .prosess-form-box-minus {
+                        .process-form-box-minus {
                           width: 35px;
                           height: 40px;
                           border-radius: 3px;
@@ -108,7 +108,7 @@
                   line-height: 40px;
                   text-align: center;
                 }
-                .prosess-submit-btn {
+                .process-submit-btn {
                   width: 200px;
                   height: 60px;
                   border-radius: 8px;

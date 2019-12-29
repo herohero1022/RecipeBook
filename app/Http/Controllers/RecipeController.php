@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\User;
 use App\Recipe;
 use App\Material;
-use App\Prosess;
+use App\Process;
 use Illuminate\Support\Facades\Auth;
 
 class RecipeController extends Controller
@@ -65,8 +65,16 @@ class RecipeController extends Controller
         return view('recipe.step3', compact('recipe', 'user', 'materials'));
     }
 
-    public function prosess_store(Request $request)
+    public function process_store(Request $request)
     {
-
+        $number = count($request->order);
+        $recipe_id = $request->recipe_id;
+        for ($n = 0; $n < $number; $n++) {
+        $process = new Process;
+        $process->recipe_id = $recipe_id;
+        $process->order = $request->order[$n];
+        $process->process = $request->process[$n];
+        $process->save();
+        }
     }
 }
