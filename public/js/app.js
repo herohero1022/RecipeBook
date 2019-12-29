@@ -49457,7 +49457,7 @@ module.exports = function(module) {
  */
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
-__webpack_require__(/*! ./sample */ "./resources/js/sample.js");
+__webpack_require__(/*! ./recipe-material */ "./resources/js/recipe-material.js");
 
 window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
 /**
@@ -49597,17 +49597,37 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/sample.js":
-/*!********************************!*\
-  !*** ./resources/js/sample.js ***!
-  \********************************/
+/***/ "./resources/js/recipe-material.js":
+/*!*****************************************!*\
+  !*** ./resources/js/recipe-material.js ***!
+  \*****************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-$(function () {
-  $('#btn').on('click', function () {
-    alert("Hello jQuery!!");
-  });
+$('#material-form-box-plus').on('click', function () {
+  var inputCount = $('#material-form-erea .material-form-box').length;
+
+  if (inputCount < 31) {
+    var element = $('#material-form-erea .material-form-box:last-child').clone(true); // 末尾をイベントごと複製
+    // 複製したinputのクリア
+
+    var inputList = element[0].querySelectorAll('input[type="text"], textarea');
+
+    for (var i = 0; i < inputList.length; i++) {
+      inputList[i].value = "";
+    }
+
+    $('#material-form-erea .material-form-box').parent().append(element); // 末尾追加
+  }
+}); // 削除
+
+$('.form-box-minus').on('click', function () {
+  // イベントごと複製しているのでonのselectorは未設定
+  var inputCount = $('#material-form-erea .material-form-box').length;
+
+  if (inputCount > 1) {
+    $(this).closest('.material-form-box').remove();
+  }
 });
 
 /***/ }),

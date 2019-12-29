@@ -238,6 +238,149 @@
   margin-top: 20px;
 }
 
+.material-main-contents {
+  width: 70%;
+  background-color: white;
+  margin: 40px auto 0px;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
+}
+
+.material-main-contents .material-content {
+  width: calc(100% - 40px);
+  height: calc(100% - 40px);
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-pack: center;
+          justify-content: center;
+}
+
+.material-main-contents .material-content-title {
+  width: 100%;
+  height: 60px;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 60px;
+  border-bottom: gray 1px solid;
+}
+
+.material-main-contents .material-content-box {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-pack: center;
+          justify-content: center;
+}
+
+.material-main-contents .material-content-box-top {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  margin-top: 30px;
+}
+
+.material-main-contents .material-content-box-top .content-box-ingredients {
+  height: 40px;
+  width: 200px;
+  background-color: burlywood;
+  border-radius: 3px;
+  font-size: 14px;
+  line-height: 40px;
+  font-weight: bold;
+  text-align: center;
+  margin-right: 8px;
+}
+
+.material-main-contents .material-content-box-top .content-box-quantity {
+  height: 40px;
+  width: 200px;
+  background-color: burlywood;
+  border-radius: 3px;
+  font-size: 14px;
+  line-height: 40px;
+  font-weight: bold;
+  text-align: center;
+  margin-right: 43px;
+}
+
+.material-main-contents .material-content-box .material-form-erea {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+}
+
+.material-main-contents .material-content-box .material-form-erea .material-form-box {
+  width: 100%;
+  margin: 10px 0;
+}
+
+.material-main-contents .material-content-box .material-form-erea .material-form-box .material-input-box {
+  width: 100%;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+}
+
+.material-main-contents .material-content-box .material-form-erea .material-form-box .material-input-box .input-erea {
+  height: 40px;
+  width: 200px;
+  border-radius: 3px;
+  background-color: whitesmoke;
+  margin-right: 8px;
+}
+
+.material-main-contents .material-content-box .material-form-erea .material-form-box .material-input-box .form-box-minus {
+  width: 35px;
+  height: 40px;
+  border-radius: 3px;
+  background-color: blue;
+  color: white;
+  font-size: 22px;
+  line-height: 40px;
+  text-align: center;
+}
+
+.material-main-contents .material-content-box .form-box-plus {
+  width: 35px;
+  height: 40px;
+  border-radius: 3px;
+  background-color: red;
+  color: white;
+  font-size: 22px;
+  line-height: 40px;
+  text-align: center;
+  margin-left: 313px;
+}
+
+.material-main-contents .material-content-box .material-submit-btn {
+  width: 200px;
+  height: 60px;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 60px;
+  background-color: gainsboro;
+  color: white;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
 /*!
  * Bootstrap v4.4.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors

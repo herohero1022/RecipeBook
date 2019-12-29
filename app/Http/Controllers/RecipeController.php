@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\User;
 use App\Recipe;
-use App\Matelial;
+use App\Material;
 use Illuminate\Support\Facades\Auth;
 
 class RecipeController extends Controller
@@ -40,5 +40,10 @@ class RecipeController extends Controller
     {
         $recipe_id = $id;
         return view('recipe.step2', ['recipe_id' => $recipe_id]);
+    }
+
+    public function material_store(Request $request)
+    {
+        return view('recipe.step2');
     }
 }

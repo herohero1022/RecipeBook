@@ -5,7 +5,7 @@
  */
 
 require('./bootstrap');
-require('./sample');
+require('./recipe-material');
 
 window.Vue = require('vue');
 
