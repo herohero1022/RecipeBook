@@ -1,0 +1,126 @@
+.prosess-main-contents {
+  width: 70%;
+  background-color: white;
+  margin: 40px auto 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+    .prosess-main-content {
+      width: calc(100% - 40px);
+      height: calc(100% - 40px);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+        .prosess-main-content-title {
+          height: 70px;
+            .title-box {
+              height: 100%;
+              display: flex;
+              border-bottom:gray 1px solid;
+                .recipe-title {
+                  height: 100%;
+                  font-size: 22px;
+                  font-weight: bold;
+                  line-height: 70px;
+                  color: yellowgreen;
+                  margin-right: 10px;
+                }
+                .recipe-user {
+                  font-size: 17px;
+                  color: darkgray;
+                  line-height: 70px;
+                }
+            }
+        }
+        .prosess-main-content-recipe {
+          display: flex;
+          margin: 20px 0;
+            img {
+              height: 400px;
+              margin-left: 100px;
+            }
+            .material-table-box {
+              margin-left: 200px;
+                .material-table-text {
+                  font-size: 20px;
+                  font-weight: bold;
+                  color: orange;
+                  margin-bottom: 10px;
+                  border-bottom: gray 1px solid;
+                }
+                .material-table {
+                  width: 200px;
+                    tr {
+                      margin: 7px 0;
+                      border-bottom: gray 1px solid;
+                    }
+                }
+            }
+        }
+        .prosess-main-content-prosess {
+          display: flex;
+          flex-direction: column;
+          margin-bottom: 40px;
+            .main-content-prosess-text {
+              font-size: 20px;
+              font-weight: bold;
+              color: orange;
+            }
+            .prosess-content-box {
+              width: 100%;
+                .prosess-form-box {
+                  margin: 10px 0;
+                    .prosess-input-box {
+                      display: flex;
+                        .prosess-form-box-minus {
+                          width: 35px;
+                          height: 40px;
+                          border-radius: 3px;
+                          background-color: blue;
+                          color: white;
+                          font-size: 22px;
+                          line-height: 40px;
+                          text-align: center;
+                        }
+                        .order-number {
+                          width: 30px;
+                          height: 40px;
+                          font-size: 22px;
+                          font-weight: bold;
+                          color: orange;
+                          text-align: center;
+                          line-height: 40px;
+                          margin: 0 10px;
+                        }
+                        .input-erea {
+                          border-radius: 3px;
+                          background-color: whitesmoke;
+                        }
+                    }
+                }
+                .form-box-plus {
+                  width: 35px;
+                  height: 40px;
+                  border-radius: 3px;
+                  background-color: red;
+                  color: white;
+                  font-size: 22px;
+                  line-height: 40px;
+                  text-align: center;
+                }
+                .prosess-submit-btn {
+                  width: 200px;
+                  height: 60px;
+                  border-radius: 8px;
+                  font-size: 18px;
+                  font-weight: bold;
+                  line-height: 60px;
+                  background-color: gainsboro;
+                  color: white;
+                  margin-left: 348px;
+                  margin-top: 20px;
+                }
+            }
+        }
+    }
+}

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\User;
 use App\Recipe;
 use App\Material;
+use App\Prosess;
 use Illuminate\Support\Facades\Auth;
 
 class RecipeController extends Controller
@@ -45,19 +46,27 @@ class RecipeController extends Controller
     public function material_store(Request $request)
     {
         $number = count($request->ingredients);
-        eval(\Psy\sh());
+        $recipe_id = $request->recipe_id;
         for ($n = 0; $n < $number; $n++) {
         $material = new Material;
-        $material->recipe_id = $request->recipe_id;
+        $material->recipe_id = $recipe_id;
         $material->ingredients = $request->ingredients[$n];
         $material->quantity = $request->quantity[$n];
         $material->save();
         }
-        return redirect()->route('recipe.step3');
+        return redirect()->route('recipe.step3', ['recipe_id' => $recipe_id]);
     }
 
-    public function step3()
+    public function step3($recipe_id)
     {
-        return view('recipe.step3');
+        $recipe = Recipe::find($recipe_id);
+        $user = Recipe::find($recipe_id)->user;
+        $materials = Recipe::find($recipe_id)->materials;
+        return view('recipe.step3', compact('recipe', 'user', 'materials'));
+    }
+
+    public function prosess_store(Request $request)
+    {
+
     }
 }

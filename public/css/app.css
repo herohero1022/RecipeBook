@@ -1,7 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
 
 .home-wrapper {
-  height: 100%;
   width: 100%;
   background-color: wheat;
 }
@@ -378,6 +377,167 @@
   background-color: gainsboro;
   color: white;
   margin: 0 auto;
+  margin-top: 20px;
+}
+
+.prosess-main-contents {
+  width: 70%;
+  background-color: white;
+  margin: 40px auto 0px;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
+}
+
+.prosess-main-contents .prosess-main-content {
+  width: calc(100% - 40px);
+  height: calc(100% - 40px);
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-pack: center;
+          justify-content: center;
+}
+
+.prosess-main-contents .prosess-main-content .prosess-main-content-title {
+  height: 70px;
+}
+
+.prosess-main-contents .prosess-main-content .prosess-main-content-title .title-box {
+  height: 100%;
+  display: -webkit-box;
+  display: flex;
+  border-bottom: gray 1px solid;
+}
+
+.prosess-main-contents .prosess-main-content .prosess-main-content-title .title-box .recipe-title {
+  height: 100%;
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 70px;
+  color: yellowgreen;
+  margin-right: 10px;
+}
+
+.prosess-main-contents .prosess-main-content .prosess-main-content-title .title-box .recipe-user {
+  font-size: 17px;
+  color: darkgray;
+  line-height: 70px;
+}
+
+.prosess-main-contents .prosess-main-content .prosess-main-content-recipe {
+  display: -webkit-box;
+  display: flex;
+  margin: 20px 0;
+}
+
+.prosess-main-contents .prosess-main-content .prosess-main-content-recipe img {
+  height: 400px;
+  margin-left: 100px;
+}
+
+.prosess-main-contents .prosess-main-content .prosess-main-content-recipe .material-table-box {
+  margin-left: 200px;
+}
+
+.prosess-main-contents .prosess-main-content .prosess-main-content-recipe .material-table-box .material-table-text {
+  font-size: 20px;
+  font-weight: bold;
+  color: orange;
+  margin-bottom: 10px;
+  border-bottom: gray 1px solid;
+}
+
+.prosess-main-contents .prosess-main-content .prosess-main-content-recipe .material-table-box .material-table {
+  width: 200px;
+}
+
+.prosess-main-contents .prosess-main-content .prosess-main-content-recipe .material-table-box .material-table tr {
+  margin: 7px 0;
+  border-bottom: gray 1px solid;
+}
+
+.prosess-main-contents .prosess-main-content .prosess-main-content-prosess {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  margin-bottom: 40px;
+}
+
+.prosess-main-contents .prosess-main-content .prosess-main-content-prosess .main-content-prosess-text {
+  font-size: 20px;
+  font-weight: bold;
+  color: orange;
+}
+
+.prosess-main-contents .prosess-main-content .prosess-main-content-prosess .prosess-content-box {
+  width: 100%;
+}
+
+.prosess-main-contents .prosess-main-content .prosess-main-content-prosess .prosess-content-box .prosess-form-box {
+  margin: 10px 0;
+}
+
+.prosess-main-contents .prosess-main-content .prosess-main-content-prosess .prosess-content-box .prosess-form-box .prosess-input-box {
+  display: -webkit-box;
+  display: flex;
+}
+
+.prosess-main-contents .prosess-main-content .prosess-main-content-prosess .prosess-content-box .prosess-form-box .prosess-input-box .prosess-form-box-minus {
+  width: 35px;
+  height: 40px;
+  border-radius: 3px;
+  background-color: blue;
+  color: white;
+  font-size: 22px;
+  line-height: 40px;
+  text-align: center;
+}
+
+.prosess-main-contents .prosess-main-content .prosess-main-content-prosess .prosess-content-box .prosess-form-box .prosess-input-box .order-number {
+  width: 30px;
+  height: 40px;
+  font-size: 22px;
+  font-weight: bold;
+  color: orange;
+  text-align: center;
+  line-height: 40px;
+  margin: 0 10px;
+}
+
+.prosess-main-contents .prosess-main-content .prosess-main-content-prosess .prosess-content-box .prosess-form-box .prosess-input-box .input-erea {
+  border-radius: 3px;
+  background-color: whitesmoke;
+}
+
+.prosess-main-contents .prosess-main-content .prosess-main-content-prosess .prosess-content-box .form-box-plus {
+  width: 35px;
+  height: 40px;
+  border-radius: 3px;
+  background-color: red;
+  color: white;
+  font-size: 22px;
+  line-height: 40px;
+  text-align: center;
+}
+
+.prosess-main-contents .prosess-main-content .prosess-main-content-prosess .prosess-content-box .prosess-submit-btn {
+  width: 200px;
+  height: 60px;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 60px;
+  background-color: gainsboro;
+  color: white;
+  margin-left: 348px;
   margin-top: 20px;
 }
 

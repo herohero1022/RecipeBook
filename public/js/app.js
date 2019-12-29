@@ -49459,6 +49459,8 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 __webpack_require__(/*! ./recipe-material */ "./resources/js/recipe-material.js");
 
+__webpack_require__(/*! ./recipe-prosess */ "./resources/js/recipe-prosess.js");
+
 window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
 /**
  * The following block of code may be used to automatically register your
@@ -49627,6 +49629,54 @@ $('.form-box-minus').on('click', function () {
 
   if (inputCount > 1) {
     $(this).closest('.material-form-box').remove();
+  }
+});
+
+/***/ }),
+
+/***/ "./resources/js/recipe-prosess.js":
+/*!****************************************!*\
+  !*** ./resources/js/recipe-prosess.js ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+$('#prosess-form-box-plus').on('click', function () {
+  var inputCount = $('#prosess-form-erea .prosess-form-box').length;
+
+  if (inputCount < 15) {
+    var element = $('#prosess-form-erea .prosess-form-box:last-child').clone(true); // 末尾をイベントごと複製
+    // 複製したinputのクリア
+
+    var inputList = element[0].querySelectorAll('input[type="text"], textarea');
+
+    for (var i = 0; i < inputList.length; i++) {
+      inputList[i].value = "";
+    }
+
+    $('#prosess-form-erea .prosess-form-box').parent().append(element); // 末尾追加
+
+    $('.order-number').each(function (i) {
+      $(this).text(i + 1);
+    });
+    $('.input-erea-number').each(function (i) {
+      $(this).text(i + 1);
+    });
+  }
+}); // 削除
+
+$('.prosess-form-box-minus').on('click', function () {
+  // イベントごと複製しているのでonのselectorは未設定
+  var inputCount = $('#prosess-form-erea .prosess-form-box').length;
+
+  if (inputCount > 1) {
+    $(this).closest('.prosess-form-box').remove();
+    $('.order-number').each(function (i) {
+      $(this).text(i + 1);
+    });
+    $('.input-erea-number').each(function (i) {
+      $(this).text(i + 1);
+    });
   }
 });
 

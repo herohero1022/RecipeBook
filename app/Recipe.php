@@ -15,4 +15,9 @@ class Recipe extends Model
     {
         return $this->hasMany('App\Material');
     }
+
+    public function prosesses()
+    {
+        return $this->hasMany('App\Prosess');
+    }
 }

@@ -6,6 +6,7 @@
 
 require('./bootstrap');
 require('./recipe-material');
+require('./recipe-prosess')
 
 window.Vue = require('vue');
 

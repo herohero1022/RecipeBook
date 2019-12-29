@@ -28,6 +28,7 @@ Route::get('/recipe/step1', 'RecipeController@step1');
 Route::post('/recipe/store', 'RecipeController@store')->name('recipe.store');
 Route::get('/recipe/step2/{id}', 'RecipeController@step2')->name('recipe.step2');
 Route::post('/recipe/material_store', 'RecipeController@material_store')->name('recipe.material_store');
-Route::get('/recipe/step3', 'RecipeController@step3')->name('recipe.step3');
+Route::get('/recipe/step3/{recipe_id}', 'RecipeController@step3')->name('recipe.step3');
+Route::post('/recipe/prosess_store', 'RecipeController@prosess_store')->name('recipe.prosess_store');
 
 
