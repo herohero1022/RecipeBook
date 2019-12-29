@@ -1,5 +1,6 @@
 <html>
 <head>
+  <script src="{{ asset('js/app.js') }}" defer></script>
   <link rel="stylesheet" href="{{ mix('css/app.css') }}">
   <title>
     home/index

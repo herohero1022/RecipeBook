@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\User;
 use App\Recipe;
+use App\Matelial;
 use Illuminate\Support\Facades\Auth;
 
 class RecipeController extends Controller
@@ -18,8 +19,7 @@ class RecipeController extends Controller
     public function step1()
     {
         $user = Auth::user();
-        $recipes = Recipe::all();
-        return view('recipe.step1',['recipes' => $recipes, 'user' => $user]);
+        return view('recipe.step1',['user' => $user]);
     }
 
     public function store(Request $request)
@@ -32,11 +32,13 @@ class RecipeController extends Controller
         $recipe->title = $request->title;
         $recipe->description = $request->description;
         $recipe->save();
-        return redirect('/recipe/step2');
+        $id = $recipe->id;
+        return redirect()->route('recipe.step2', ['id' => $id]);
     }
 
-    public function step2()
+    public function step2($id)
     {
-        return view('recipe.step2');
+        $recipe_id = $id;
+        return view('recipe.step2', ['recipe_id' => $recipe_id]);
     }
 }
