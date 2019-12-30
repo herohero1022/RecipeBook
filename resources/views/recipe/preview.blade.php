@@ -74,6 +74,7 @@
           </div>
           <form method="POST" action="{{ route('recipe.preview_store') }}" class="prview-form">
             @csrf
+            {{ method_field('patch') }}
             <input type="hidden" name="recipe_id" value="{{$recipe->id}}"/>
             <input type="hidden" name="status" value="open">
             <button type="submit" class="preview-btn">

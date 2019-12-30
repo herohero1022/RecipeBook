@@ -32,6 +32,7 @@ class RecipeController extends Controller
         $recipe->user_id = $request->user_id;
         $recipe->title = $request->title;
         $recipe->description = $request->description;
+        $recipe->status = $request->status;
         $recipe->save();
         $id = $recipe->id;
         return redirect()->route('recipe.step2', ['id' => $id]);
@@ -109,5 +110,36 @@ class RecipeController extends Controller
         $materials = Recipe::find($recipe_id)->materials;
         $processes = Recipe::find($recipe_id)->processes->sortBy('order');
         return view('recipe.edit', compact('recipe', 'user', 'materials', 'processes'));
+    }
+
+    public function recipe_edit ($recipe_id)
+    {
+        $recipe = Recipe::find($recipe_id);
+        $user = Recipe::find($recipe_id)->user;
+        return view('recipe.recipe_edit', compact('recipe', 'user'));
+    }
+
+    public function material_edit ($recipe_id)
+    {
+        $recipe = Recipe::find($recipe_id);
+        $user = Recipe::find($recipe_id)->user;
+        $materials = Recipe::find($recipe_id)->materials;
+        return view('recipe.material_edit', compact('recipe', 'user', 'material'));
+    }
+
+    public function process_edit ($recipe_id)
+    {
+        $recipe = Recipe::find($recipe_id);
+        $user = Recipe::find($recipe_id)->user;
+        $materials = Recipe::find($recipe_id)->materials;
+        $processes = Recipe::find($recipe_id)->processes->sortBy('order');
+        return view('recipe.process_edit', compact('recipe', 'user', 'materials', 'processes'));
+    }
+
+    public function delete(Request $request) {
+        $recipe = Recipe::find($request->recipe_id);
+        eval(\Psy\sh());
+        $recipe->delete();
+        return redirect('/recipe');
     }
 }

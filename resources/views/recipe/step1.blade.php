@@ -33,6 +33,7 @@
           </div>
           <form method="POST" action="{{ route('recipe.store') }}" enctype="multipart/form-data" class="add-content-box">
             @csrf
+            <input type="hidden" name="status" value="close"/>
             <input type="hidden" name="user_id" value="{{$user->id}}"/>
             <div class="form-box">
               <div class="form-box-text">

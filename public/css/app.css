@@ -743,6 +743,14 @@ body {
   font-size: 17px;
   color: darkgray;
   line-height: 70px;
+  margin-right: 10px;
+}
+
+.edit-main-contents .edit-main-content .edit-main-content-title .title-box .recipe-edit-link {
+  font-size: 17px;
+  color: deepskyblue;
+  line-height: 70px;
+  text-decoration: none;
 }
 
 .edit-main-contents .edit-main-content .edit-main-content-recipe {
@@ -760,12 +768,24 @@ body {
   margin-left: 200px;
 }
 
-.edit-main-contents .edit-main-content .edit-main-content-recipe .material-table-box .material-table-text {
+.edit-main-contents .edit-main-content .edit-main-content-recipe .material-table-box .material-table-text-box {
+  display: -webkit-box;
+  display: flex;
+  border-bottom: gray 1px solid;
+}
+
+.edit-main-contents .edit-main-content .edit-main-content-recipe .material-table-box .material-table-text-box .material-table-text {
   font-size: 20px;
   font-weight: bold;
   color: orange;
-  margin-bottom: 10px;
-  border-bottom: gray 1px solid;
+  margin-right: 10px;
+}
+
+.edit-main-contents .edit-main-content .edit-main-content-recipe .material-table-box .material-table-text-box .material-edit-link {
+  font-size: 15px;
+  color: deepskyblue;
+  text-decoration: none;
+  line-height: 40px;
 }
 
 .edit-main-contents .edit-main-content .edit-main-content-recipe .material-table-box .material-table {
@@ -786,10 +806,24 @@ body {
   margin-bottom: 40px;
 }
 
-.edit-main-contents .edit-main-content .edit-main-content-edit .main-content-edit-text {
+.edit-main-contents .edit-main-content .edit-main-content-edit .main-content-edit-text-box {
+  display: -webkit-box;
+  display: flex;
+}
+
+.edit-main-contents .edit-main-content .edit-main-content-edit .main-content-edit-text-box .main-content-edit-text {
+  height: 32px;
   font-size: 20px;
   font-weight: bold;
   color: orange;
+  margin-right: 10px;
+}
+
+.edit-main-contents .edit-main-content .edit-main-content-edit .main-content-edit-text-box .process-edit-link {
+  font-size: 15px;
+  color: deepskyblue;
+  text-decoration: none;
+  line-height: 32px;
 }
 
 .edit-main-contents .edit-main-content .edit-main-content-edit .main-content-edit {

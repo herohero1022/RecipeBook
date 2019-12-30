@@ -31,6 +31,10 @@ Route::post('/recipe/material_store', 'RecipeController@material_store')->name('
 Route::get('/recipe/step3/{recipe_id}', 'RecipeController@step3')->name('recipe.step3');
 Route::post('/recipe/process_store', 'RecipeController@process_store')->name('recipe.process_store');
 Route::get('/recipe/preview/{recipe_id}', 'RecipeController@preview')->name('recipe.preview');
-Route::post('/recipe/preview_store', 'RecipeController@preview_store')->name('recipe.preview_store');
+Route::patch('/recipe/preview_store', 'RecipeController@preview_store')->name('recipe.preview_store');
 Route::post('/recipe/close', 'RecipeController@close')->name('recipe.close');
 Route::get('/recipe/edit/{recipe_id}', 'RecipeController@edit');
+Route::get('/recipe/recipe_edit/{recipe_id}', 'RecipeController@recipe_edit');
+Route::get('/recipe/matrial_edit/{recipe_id}', 'RecipeController@material_edit');
+Route::get('/recipe/process_edit/{recipe_id}', 'RecipeController@process_edit');
+Route::delete('/recipe/delete', 'RecipeController@delete')->name('recipe.delete');

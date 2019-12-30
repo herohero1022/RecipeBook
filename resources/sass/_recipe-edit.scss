@@ -29,6 +29,13 @@
                   font-size: 17px;
                   color: darkgray;
                   line-height: 70px;
+                  margin-right: 10px;
+                }
+                .recipe-edit-link {
+                  font-size: 17px;
+                  color: deepskyblue;
+                  line-height: 70px;
+                  text-decoration: none;
                 }
             }
         }
@@ -41,12 +48,21 @@
             }
             .material-table-box {
               margin-left: 200px;
-                .material-table-text {
-                  font-size: 20px;
-                  font-weight: bold;
-                  color: orange;
-                  margin-bottom: 10px;
+                .material-table-text-box {
+                  display: flex;
                   border-bottom: gray 1px solid;
+                    .material-table-text {
+                      font-size: 20px;
+                      font-weight: bold;
+                      color: orange;
+                      margin-right: 10px;
+                    }
+                    .material-edit-link {
+                      font-size: 15px;
+                      color: deepskyblue;
+                      text-decoration: none;
+                      line-height: 40px;
+                    }
                 }
                 .material-table {
                   width: 200px;
@@ -61,10 +77,21 @@
           display: flex;
           flex-direction: column;
           margin-bottom: 40px;
-            .main-content-edit-text {
-              font-size: 20px;
-              font-weight: bold;
-              color: orange;
+            .main-content-edit-text-box{
+              display: flex;
+                .main-content-edit-text {
+                  height: 32px;
+                  font-size: 20px;
+                  font-weight: bold;
+                  color: orange;
+                  margin-right: 10px;
+                }
+                .process-edit-link {
+                  font-size: 15px;
+                  color: deepskyblue;
+                  text-decoration: none;
+                  line-height: 32px;
+                }
             }
             .main-content-edit {
               display: flex;
