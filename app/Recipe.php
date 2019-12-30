@@ -6,6 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Recipe extends Model
 {
+
+    protected $fillable = ['status'];
+
     public function user()
     {
         return $this->belongsTo('App\User');
@@ -16,8 +19,8 @@ class Recipe extends Model
         return $this->hasMany('App\Material');
     }
 
-    public function prosesses()
+    public function processes()
     {
-        return $this->hasMany('App\Prosess');
+        return $this->hasMany('App\Process');
     }
 }

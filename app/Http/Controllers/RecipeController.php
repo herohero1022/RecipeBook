@@ -13,7 +13,7 @@ class RecipeController extends Controller
 {
     public function index()
     {
-        $recipes = Recipe::all();
+        $recipes = Recipe::where('status', 'open')->get();
         return view('recipe.index',['recipes' => $recipes]);
     }
 
@@ -76,5 +76,23 @@ class RecipeController extends Controller
         $process->process = $request->process[$n];
         $process->save();
         }
+        return redirect()->route('recipe.preview', ['recipe_id' => $recipe_id]);
+    }
+
+    public function preview($recipe_id)
+    {
+        $recipe = Recipe::find($recipe_id);
+        $user = Recipe::find($recipe_id)->user;
+        $materials = Recipe::find($recipe_id)->materials;
+        $processes = Recipe::find($recipe_id)->processes->sortBy('order');
+        return view('recipe.preview', compact('recipe', 'user', 'materials', 'processes'));
+    }
+
+    public function preview_store(Request $request) {
+        eval(\Psy\sh());
+        $recipe_id = $request->recipe_id;
+        Recipe::find($recipe_id)
+        ->update(['status' => $request->status]);
+        return redirect('/recipe');
     }
 }

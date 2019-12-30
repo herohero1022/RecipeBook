@@ -1,8 +1,13 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
 
+body {
+  background-color: wheat;
+}
+
 .home-wrapper {
   width: 100%;
   background-color: wheat;
+  overflow: hidden;
 }
 
 .home-header {
@@ -539,6 +544,155 @@
   color: white;
   margin-left: 348px;
   margin-top: 20px;
+}
+
+.preview-main-contents {
+  width: 70%;
+  background-color: white;
+  margin: 40px auto 40px;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
+}
+
+.preview-main-contents .preview-main-content {
+  width: calc(100% - 40px);
+  height: calc(100% - 40px);
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-pack: center;
+          justify-content: center;
+}
+
+.preview-main-contents .preview-main-content .preview-main-content-title {
+  height: 70px;
+}
+
+.preview-main-contents .preview-main-content .preview-main-content-title .title-box {
+  height: 100%;
+  display: -webkit-box;
+  display: flex;
+  border-bottom: gray 1px solid;
+}
+
+.preview-main-contents .preview-main-content .preview-main-content-title .title-box .recipe-title {
+  height: 100%;
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 70px;
+  color: yellowgreen;
+  margin-right: 10px;
+}
+
+.preview-main-contents .preview-main-content .preview-main-content-title .title-box .recipe-user {
+  font-size: 17px;
+  color: darkgray;
+  line-height: 70px;
+}
+
+.preview-main-contents .preview-main-content .preview-main-content-recipe {
+  display: -webkit-box;
+  display: flex;
+  margin: 20px 0;
+}
+
+.preview-main-contents .preview-main-content .preview-main-content-recipe img {
+  height: 400px;
+  margin-left: 100px;
+}
+
+.preview-main-contents .preview-main-content .preview-main-content-recipe .material-table-box {
+  margin-left: 200px;
+}
+
+.preview-main-contents .preview-main-content .preview-main-content-recipe .material-table-box .material-table-text {
+  font-size: 20px;
+  font-weight: bold;
+  color: orange;
+  margin-bottom: 10px;
+  border-bottom: gray 1px solid;
+}
+
+.preview-main-contents .preview-main-content .preview-main-content-recipe .material-table-box .material-table {
+  width: 200px;
+}
+
+.preview-main-contents .preview-main-content .preview-main-content-recipe .material-table-box .material-table tr {
+  margin: 7px 0;
+  border-bottom: gray 1px solid;
+}
+
+.preview-main-contents .preview-main-content .preview-main-content-preview {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  margin-bottom: 40px;
+}
+
+.preview-main-contents .preview-main-content .preview-main-content-preview .main-content-preview-text {
+  font-size: 20px;
+  font-weight: bold;
+  color: orange;
+}
+
+.preview-main-contents .preview-main-content .preview-main-content-preview .main-content-preview {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  margin-bottom: 10px;
+  border-bottom: black 1px solid;
+}
+
+.preview-main-contents .preview-main-content .preview-main-content-preview .main-content-preview .process-box {
+  display: -webkit-box;
+  display: flex;
+  margin: 20px 0;
+}
+
+.preview-main-contents .preview-main-content .preview-main-content-preview .main-content-preview .process-box .order-number {
+  width: 30px;
+  height: 40px;
+  font-size: 22px;
+  font-weight: bold;
+  color: orange;
+  text-align: center;
+  line-height: 40px;
+  margin: 0 10px;
+}
+
+.preview-main-contents .preview-main-content .preview-main-content-preview .main-content-preview .process-box .process-text {
+  width: 640px;
+  background-color: #f8f8f8;
+  border: black 1px solid;
+  border-radius: 4px;
+}
+
+.preview-main-contents .preview-main-content .prview-form {
+  width: 100%;
+}
+
+.preview-main-contents .preview-main-content .prview-form .preview-btn {
+  width: 200px;
+  height: 60px;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 60px;
+  text-align: center;
+  background-color: gainsboro;
+  color: white;
+  display: block;
+  margin: 0 auto 20px;
 }
 
 /*!
