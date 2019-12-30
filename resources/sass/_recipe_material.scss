@@ -1,0 +1,111 @@
+.material-main-contents {
+  width: 70%;
+  background-color: white;
+  margin: 40px auto 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+    .material-content {
+      width: calc(100% - 40px);
+      height: calc(100% - 40px);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+        &-title {
+          width: 100%;
+          height: 60px;
+          font-size: 22px;
+          font-weight: bold;
+          text-align: center;
+          line-height: 60px;
+          border-bottom: gray 1px solid ;
+        }
+        &-box {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+            &-top {
+              display: flex;
+              justify-content: center;
+              margin-top: 30px;
+                .content-box-ingredients {
+                  height: 40px;
+                  width: 200px;
+                  background-color: burlywood;
+                  border-radius: 3px;
+                  font-size: 14px;
+                  line-height: 40px;
+                  font-weight: bold;
+                  text-align: center;
+                  margin-right: 8px;
+                }
+                .content-box-quantity {
+                  height: 40px;
+                  width: 200px;
+                  background-color: burlywood;
+                  border-radius: 3px;
+                  font-size: 14px;
+                  line-height: 40px;
+                  font-weight: bold;
+                  text-align: center;
+                  margin-right: 43px;
+                }
+            }
+            .material-form-erea {
+              width: 100%;
+              height: 100%;
+              display: flex;
+              flex-direction: column;
+                .material-form-box {
+                  width: 100%;
+                  margin: 10px 0;
+                    .material-input-box {
+                      width: 100%;
+                      display: flex;
+                      justify-content: center;
+                        .input-erea {
+                          height: 40px;
+                          width: 200px;
+                          border-radius: 3px;
+                          background-color: whitesmoke;
+                          margin-right: 8px;
+                        }
+                        .form-box-minus {
+                          width: 35px;
+                          height: 40px;
+                          border-radius: 3px;
+                          background-color: blue;
+                          color: white;
+                          font-size: 22px;
+                          line-height: 40px;
+                          text-align: center;
+                        }
+                    }
+                }
+            }
+            .form-box-plus {
+              width: 35px;
+              height: 40px;
+              border-radius: 3px;
+              background-color: red;
+              color: white;
+              font-size: 22px;
+              line-height: 40px;
+              text-align: center;
+              margin-left: 313px;
+            }
+            .material-submit-btn {
+              width: 200px;
+              height: 60px;
+              border-radius: 8px;
+              font-size: 18px;
+              font-weight: bold;
+              line-height: 60px;
+              background-color: gainsboro;
+              color: white;
+              margin: 0 auto;
+              margin-top: 20px;
+            }
+        }
+    }
+}

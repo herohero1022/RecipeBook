@@ -1,5 +1,6 @@
 <html>
 <head>
+  <script src="{{ asset('js/app.js') }}" defer></script>
   <link rel="stylesheet" href="{{ mix('css/app.css') }}">
   <title>
     home/index
@@ -30,39 +31,25 @@
       <div class="left-contents">
       </div>
       <div class="main-contents">
+        @foreach ($recipes as $recipe)
         <div class="main-content">
           <div class="main-content-image">
+            <img src="{{ asset('storage/' . $recipe->image) }}" alt="image" style="width: 120px;"/>
           </div>
           <div class="main-content-box">
             <div class="content-box-title">
-              レシピタイトル
+              {{$recipe->title}}
             </div>
             <div class="content-box-user">
-              testuser
+              by {{$recipe->user->name}}
             </div>
-            @foreach ($items as $item)
             <div class="content-box-text">
-              {{$item->name}}
-            </div>
-            @endforeach
-          </div>
-        </div>
-        <div class="main-content">
-            <div class="main-content-image">
-            </div>
-            <div class="main-content-box">
-              <div class="content-box-title">
-                レシピタイトル
-              </div>
-              <div class="content-box-user">
-                testuser
-              </div>
-              <div class="content-box-text">
-                レシピの説明
-              </div>
+              {{$recipe->description}}
             </div>
           </div>
         </div>
+        @endforeach
+      </div>
       <div class="right-contents">
         <h1>tesyto</h1>
       </div>

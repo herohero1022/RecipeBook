@@ -1,9 +1,13 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
 
+body {
+  background-color: wheat;
+}
+
 .home-wrapper {
-  height: 100%;
   width: 100%;
-  background-color: #f8f8f8;
+  background-color: wheat;
+  overflow: hidden;
 }
 
 .home-header {
@@ -58,7 +62,7 @@
 
 .home-header .header-contents-bottom-regibtn {
   height: 100%;
-  width: 80px;
+  width: 100px;
   background-color: red;
   color: white;
   text-align: center;
@@ -115,7 +119,7 @@
   width: 120px;
   height: 120px;
   margin: auto 15px;
-  background-color: orange;
+  background-color: lightgray;
 }
 
 .home-contents .main-contents .main-content-box {
@@ -161,6 +165,534 @@
   height: 1200px;
   background-color: green;
   margin-right: 30px;
+}
+
+.add-main-contents {
+  width: 70%;
+  background-color: white;
+  margin: 40px auto 0px;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
+}
+
+.add-main-contents .add-content {
+  width: calc(100% - 40px);
+  height: calc(100% - 40px);
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-pack: center;
+          justify-content: center;
+}
+
+.add-main-contents .add-content-title {
+  width: 100%;
+  height: 60px;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 60px;
+  border-bottom: gray 1px solid;
+}
+
+.add-main-contents .add-content .add-content-box {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+}
+
+.add-main-contents .add-content .add-content-box .form-box {
+  width: 100%;
+  margin: 20px 0;
+}
+
+.add-main-contents .add-content .add-content-box .form-box-text {
+  font-size: 20px;
+  padding-bottom: 10px;
+}
+
+.add-main-contents .add-content .add-content-box .form-box .input-erea {
+  width: 100%;
+  height: 50px;
+  border-radius: 3px;
+  background-color: whitesmoke;
+  font-size: 18px;
+}
+
+.add-main-contents .add-content .add-content-box .add-submit-btn {
+  width: 200px;
+  height: 70px;
+  border-radius: 8px;
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 70px;
+  background-color: gainsboro;
+  color: white;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.material-main-contents {
+  width: 70%;
+  background-color: white;
+  margin: 40px auto 0px;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
+}
+
+.material-main-contents .material-content {
+  width: calc(100% - 40px);
+  height: calc(100% - 40px);
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-pack: center;
+          justify-content: center;
+}
+
+.material-main-contents .material-content-title {
+  width: 100%;
+  height: 60px;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 60px;
+  border-bottom: gray 1px solid;
+}
+
+.material-main-contents .material-content-box {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-pack: center;
+          justify-content: center;
+}
+
+.material-main-contents .material-content-box-top {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  margin-top: 30px;
+}
+
+.material-main-contents .material-content-box-top .content-box-ingredients {
+  height: 40px;
+  width: 200px;
+  background-color: burlywood;
+  border-radius: 3px;
+  font-size: 14px;
+  line-height: 40px;
+  font-weight: bold;
+  text-align: center;
+  margin-right: 8px;
+}
+
+.material-main-contents .material-content-box-top .content-box-quantity {
+  height: 40px;
+  width: 200px;
+  background-color: burlywood;
+  border-radius: 3px;
+  font-size: 14px;
+  line-height: 40px;
+  font-weight: bold;
+  text-align: center;
+  margin-right: 43px;
+}
+
+.material-main-contents .material-content-box .material-form-erea {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+}
+
+.material-main-contents .material-content-box .material-form-erea .material-form-box {
+  width: 100%;
+  margin: 10px 0;
+}
+
+.material-main-contents .material-content-box .material-form-erea .material-form-box .material-input-box {
+  width: 100%;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+}
+
+.material-main-contents .material-content-box .material-form-erea .material-form-box .material-input-box .input-erea {
+  height: 40px;
+  width: 200px;
+  border-radius: 3px;
+  background-color: whitesmoke;
+  margin-right: 8px;
+}
+
+.material-main-contents .material-content-box .material-form-erea .material-form-box .material-input-box .form-box-minus {
+  width: 35px;
+  height: 40px;
+  border-radius: 3px;
+  background-color: blue;
+  color: white;
+  font-size: 22px;
+  line-height: 40px;
+  text-align: center;
+}
+
+.material-main-contents .material-content-box .form-box-plus {
+  width: 35px;
+  height: 40px;
+  border-radius: 3px;
+  background-color: red;
+  color: white;
+  font-size: 22px;
+  line-height: 40px;
+  text-align: center;
+  margin-left: 313px;
+}
+
+.material-main-contents .material-content-box .material-submit-btn {
+  width: 200px;
+  height: 60px;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 60px;
+  background-color: gainsboro;
+  color: white;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.process-main-contents {
+  width: 70%;
+  background-color: white;
+  margin: 40px auto 0px;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
+}
+
+.process-main-contents .process-main-content {
+  width: calc(100% - 40px);
+  height: calc(100% - 40px);
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-pack: center;
+          justify-content: center;
+}
+
+.process-main-contents .process-main-content .process-main-content-title {
+  height: 70px;
+}
+
+.process-main-contents .process-main-content .process-main-content-title .title-box {
+  height: 100%;
+  display: -webkit-box;
+  display: flex;
+  border-bottom: gray 1px solid;
+}
+
+.process-main-contents .process-main-content .process-main-content-title .title-box .recipe-title {
+  height: 100%;
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 70px;
+  color: yellowgreen;
+  margin-right: 10px;
+}
+
+.process-main-contents .process-main-content .process-main-content-title .title-box .recipe-user {
+  font-size: 17px;
+  color: darkgray;
+  line-height: 70px;
+}
+
+.process-main-contents .process-main-content .process-main-content-recipe {
+  display: -webkit-box;
+  display: flex;
+  margin: 20px 0;
+}
+
+.process-main-contents .process-main-content .process-main-content-recipe img {
+  height: 400px;
+  margin-left: 100px;
+}
+
+.process-main-contents .process-main-content .process-main-content-recipe .material-table-box {
+  margin-left: 200px;
+}
+
+.process-main-contents .process-main-content .process-main-content-recipe .material-table-box .material-table-text {
+  font-size: 20px;
+  font-weight: bold;
+  color: orange;
+  margin-bottom: 10px;
+  border-bottom: gray 1px solid;
+}
+
+.process-main-contents .process-main-content .process-main-content-recipe .material-table-box .material-table {
+  width: 200px;
+}
+
+.process-main-contents .process-main-content .process-main-content-recipe .material-table-box .material-table tr {
+  margin: 7px 0;
+  border-bottom: gray 1px solid;
+}
+
+.process-main-contents .process-main-content .process-main-content-process {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  margin-bottom: 40px;
+}
+
+.process-main-contents .process-main-content .process-main-content-process .main-content-process-text {
+  font-size: 20px;
+  font-weight: bold;
+  color: orange;
+}
+
+.process-main-contents .process-main-content .process-main-content-process .process-content-box {
+  width: 100%;
+}
+
+.process-main-contents .process-main-content .process-main-content-process .process-content-box .process-form-box {
+  margin: 10px 0;
+}
+
+.process-main-contents .process-main-content .process-main-content-process .process-content-box .process-form-box .process-input-box {
+  display: -webkit-box;
+  display: flex;
+}
+
+.process-main-contents .process-main-content .process-main-content-process .process-content-box .process-form-box .process-input-box .process-form-box-minus {
+  width: 35px;
+  height: 40px;
+  border-radius: 3px;
+  background-color: blue;
+  color: white;
+  font-size: 22px;
+  line-height: 40px;
+  text-align: center;
+}
+
+.process-main-contents .process-main-content .process-main-content-process .process-content-box .process-form-box .process-input-box .order-number {
+  width: 30px;
+  height: 40px;
+  font-size: 22px;
+  font-weight: bold;
+  color: orange;
+  text-align: center;
+  line-height: 40px;
+  margin: 0 10px;
+}
+
+.process-main-contents .process-main-content .process-main-content-process .process-content-box .process-form-box .process-input-box .input-erea {
+  border-radius: 3px;
+  background-color: whitesmoke;
+}
+
+.process-main-contents .process-main-content .process-main-content-process .process-content-box .form-box-plus {
+  width: 35px;
+  height: 40px;
+  border-radius: 3px;
+  background-color: red;
+  color: white;
+  font-size: 22px;
+  line-height: 40px;
+  text-align: center;
+}
+
+.process-main-contents .process-main-content .process-main-content-process .process-content-box .process-submit-btn {
+  width: 200px;
+  height: 60px;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 60px;
+  background-color: gainsboro;
+  color: white;
+  margin-left: 348px;
+  margin-top: 20px;
+}
+
+.preview-main-contents {
+  width: 70%;
+  background-color: white;
+  margin: 40px auto 40px;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
+}
+
+.preview-main-contents .preview-main-content {
+  width: calc(100% - 40px);
+  height: calc(100% - 40px);
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-pack: center;
+          justify-content: center;
+}
+
+.preview-main-contents .preview-main-content .preview-main-content-title {
+  height: 70px;
+}
+
+.preview-main-contents .preview-main-content .preview-main-content-title .title-box {
+  height: 100%;
+  display: -webkit-box;
+  display: flex;
+  border-bottom: gray 1px solid;
+}
+
+.preview-main-contents .preview-main-content .preview-main-content-title .title-box .recipe-title {
+  height: 100%;
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 70px;
+  color: yellowgreen;
+  margin-right: 10px;
+}
+
+.preview-main-contents .preview-main-content .preview-main-content-title .title-box .recipe-user {
+  font-size: 17px;
+  color: darkgray;
+  line-height: 70px;
+}
+
+.preview-main-contents .preview-main-content .preview-main-content-recipe {
+  display: -webkit-box;
+  display: flex;
+  margin: 20px 0;
+}
+
+.preview-main-contents .preview-main-content .preview-main-content-recipe img {
+  height: 400px;
+  margin-left: 100px;
+}
+
+.preview-main-contents .preview-main-content .preview-main-content-recipe .material-table-box {
+  margin-left: 200px;
+}
+
+.preview-main-contents .preview-main-content .preview-main-content-recipe .material-table-box .material-table-text {
+  font-size: 20px;
+  font-weight: bold;
+  color: orange;
+  margin-bottom: 10px;
+  border-bottom: gray 1px solid;
+}
+
+.preview-main-contents .preview-main-content .preview-main-content-recipe .material-table-box .material-table {
+  width: 200px;
+}
+
+.preview-main-contents .preview-main-content .preview-main-content-recipe .material-table-box .material-table tr {
+  margin: 7px 0;
+  border-bottom: gray 1px solid;
+}
+
+.preview-main-contents .preview-main-content .preview-main-content-preview {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  margin-bottom: 40px;
+}
+
+.preview-main-contents .preview-main-content .preview-main-content-preview .main-content-preview-text {
+  font-size: 20px;
+  font-weight: bold;
+  color: orange;
+}
+
+.preview-main-contents .preview-main-content .preview-main-content-preview .main-content-preview {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  margin-bottom: 10px;
+  border-bottom: black 1px solid;
+}
+
+.preview-main-contents .preview-main-content .preview-main-content-preview .main-content-preview .process-box {
+  display: -webkit-box;
+  display: flex;
+  margin: 20px 0;
+}
+
+.preview-main-contents .preview-main-content .preview-main-content-preview .main-content-preview .process-box .order-number {
+  width: 30px;
+  height: 40px;
+  font-size: 22px;
+  font-weight: bold;
+  color: orange;
+  text-align: center;
+  line-height: 40px;
+  margin: 0 10px;
+}
+
+.preview-main-contents .preview-main-content .preview-main-content-preview .main-content-preview .process-box .process-text {
+  width: 640px;
+  background-color: #f8f8f8;
+  border: black 1px solid;
+  border-radius: 4px;
+}
+
+.preview-main-contents .preview-main-content .prview-form {
+  width: 100%;
+}
+
+.preview-main-contents .preview-main-content .prview-form .preview-btn {
+  width: 200px;
+  height: 60px;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 60px;
+  text-align: center;
+  background-color: gainsboro;
+  color: white;
+  display: block;
+  margin: 0 auto 20px;
 }
 
 /*!

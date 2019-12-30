@@ -1,0 +1,57 @@
+.add-main-contents {
+  width: 70%;
+  background-color: white;
+  margin: 40px auto 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+    .add-content {
+      width: calc(100% - 40px);
+      height: calc(100% - 40px);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+        &-title {
+          width: 100%;
+          height: 60px;
+          font-size: 22px;
+          font-weight: bold;
+          text-align: center;
+          line-height: 60px;
+          border-bottom: gray 1px solid ;
+        }
+        .add-content-box {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+            .form-box {
+              width: 100%;
+              margin: 20px 0;
+                &-text {
+                  font-size: 20px;
+                  padding-bottom: 10px;
+                }
+                .input-erea {
+                  width: 100%;
+                  height: 50px;
+                  border-radius: 3px;
+                  background-color: whitesmoke;
+                  font-size: 18px;
+                }
+            }
+            .add-submit-btn {
+              width: 200px;
+              height: 70px;
+              border-radius: 8px;
+              font-size: 22px;
+              font-weight: bold;
+              line-height: 70px;
+              background-color: gainsboro;
+              color: white;
+              margin: 0 auto;
+              margin-top: 20px;
+            }
+        }
+    }
+}
