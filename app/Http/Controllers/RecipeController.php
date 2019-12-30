@@ -89,10 +89,25 @@ class RecipeController extends Controller
     }
 
     public function preview_store(Request $request) {
-        eval(\Psy\sh());
         $recipe_id = $request->recipe_id;
         Recipe::find($recipe_id)
         ->update(['status' => $request->status]);
         return redirect('/recipe');
+    }
+
+    public function close(Request $request) {
+        $recipe_id = $request->recipe_id;
+        Recipe::find($recipe_id)
+        ->update(['status' => $request->status]);
+        return redirect('/recipe');
+    }
+
+    public function edit ($recipe_id)
+    {
+        $recipe = Recipe::find($recipe_id);
+        $user = Recipe::find($recipe_id)->user;
+        $materials = Recipe::find($recipe_id)->materials;
+        $processes = Recipe::find($recipe_id)->processes->sortBy('order');
+        return view('recipe.edit', compact('recipe', 'user', 'materials', 'processes'));
     }
 }
