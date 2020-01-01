@@ -66,7 +66,7 @@
                   {{$process->order}}
                 </div>
                 <div class="process-text">
-                  {{$process->process}}
+                  {!!  nl2br($process->process) !!}
                 </div>
               </div>
               @endforeach

@@ -124,7 +124,22 @@ class RecipeController extends Controller
         $recipe = Recipe::find($recipe_id);
         $user = Recipe::find($recipe_id)->user;
         $materials = Recipe::find($recipe_id)->materials;
-        return view('recipe.material_edit', compact('recipe', 'user', 'material'));
+        return view('recipe.material_edit', compact('recipe', 'user', 'materials'));
+    }
+
+    public function material_update (Request $request)
+    {
+        $material = Material::where('recipe_id','=',$request->recipe_id)->delete();
+        $number = count($request->ingredients);
+        $recipe_id = $request->recipe_id;
+        for ($n = 0; $n < $number; $n++) {
+        $material = new Material;
+        $material->recipe_id = $recipe_id;
+        $material->ingredients = $request->ingredients[$n];
+        $material->quantity = $request->quantity[$n];
+        $material->save();
+        return redirect('recipe/edit/{{$recipe_id}}');
+        }
     }
 
     public function process_edit ($recipe_id)
