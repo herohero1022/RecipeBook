@@ -27,7 +27,7 @@ class MaterialController extends Controller
         $material->quantity = $request->quantity[$n];
         $material->save();
         }
-        return redirect()->route('recipe.step3', ['recipe_id' => $recipe_id]);
+        return redirect()->route('process.new', ['recipe_id' => $recipe_id]);
     }
 
     public function edit ($recipe_id)

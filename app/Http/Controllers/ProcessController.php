@@ -10,15 +10,15 @@ use App\Process;
 
 class ProcessController extends Controller
 {
-    public function step3($recipe_id)
+    public function new($recipe_id)
     {
         $recipe = Recipe::find($recipe_id);
         $user = Recipe::find($recipe_id)->user;
         $materials = Recipe::find($recipe_id)->materials;
-        return view('recipe.step3', compact('recipe', 'user', 'materials'));
+        return view('process.new', compact('recipe', 'user', 'materials'));
     }
 
-    public function process_store(Request $request)
+    public function store(Request $request)
     {
         $number = count($request->order);
         $recipe_id = $request->recipe_id;
@@ -32,16 +32,16 @@ class ProcessController extends Controller
         return redirect()->route('recipe.preview', ['recipe_id' => $recipe_id]);
     }
 
-    public function process_edit ($recipe_id)
+    public function edit ($recipe_id)
     {
         $recipe = Recipe::find($recipe_id);
         $user = Recipe::find($recipe_id)->user;
         $materials = Recipe::find($recipe_id)->materials;
         $processes = Recipe::find($recipe_id)->processes->sortBy('order');
-        return view('recipe.process_edit', compact('recipe', 'user', 'materials', 'processes'));
+        return view('process.edit', compact('recipe', 'user', 'materials', 'processes'));
     }
 
-    public function process_update (Request $request)
+    public function update (Request $request)
     {
         $process = Process::where('recipe_id','=',$request->recipe_id)->delete();
         $number = count($request->order);

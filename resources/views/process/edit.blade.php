@@ -59,28 +59,30 @@
             <div class="main-content-process-text">
               作り方
             </div>
-            <form method="POST" action="{{ route('recipe.process_store') }}" class="process-content-box">
+            <form method="POST" action="{{ route('process.update') }}" class="process-content-box">
             @csrf
               <input type="hidden" name="recipe_id" value="{{$recipe->id}}"/>
               <div class="process-form-erea" id="process-form-erea">
+                @foreach($processes as $process)
                 <div class="process-form-box">
                   <div class="process-input-box">
                     <div class="process-form-box-minus">
                       ー
                     </div>
-                    <input type="hidden" name="order[]" class="input-erea-number" value="1">
+                    <input type="hidden" name="order[]" class="input-erea-number" value="{{$process->order}}">
                     <div class="order-number">
-                      1
+                      {{$process->order}}
                     </div>
-                    <textarea name="process[]" rows="4" cols="80" placeholder="ここに作り方を記入してください" class="input-erea"></textarea>
+                    <textarea name="process[]" rows="4" cols="80" placeholder="ここに作り方を記入してください" class="input-erea">{{$process->process}}</textarea>
                   </div>
                 </div>
+                @endforeach
               </div>
               <div class="form-box-plus" id="process-form-box-plus">
                 +
               </div>
               <button type="submit" class="process-submit-btn">
-                作り方を登録する
+                作り方を編集する
               </button>
             </form>
           </div>
