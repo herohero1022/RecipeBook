@@ -73,7 +73,6 @@
                       1
                     </div>
                     <textarea name="process[]" rows="4" cols="80" placeholder="ここに作り方を記入してください" class="input-erea"></textarea>
-                    {{-- <input type="texterea" name="process[]" placeholder="例：鳥もも肉" class="input-erea"> --}}
                   </div>
                 </div>
               </div>

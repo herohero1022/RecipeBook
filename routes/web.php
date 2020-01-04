@@ -38,4 +38,5 @@ Route::get('/recipe/recipe_edit/{recipe_id}', 'RecipeController@recipe_edit');
 Route::get('/recipe/matrial_edit/{recipe_id}', 'RecipeController@material_edit');
 Route::post('/recipe/matrial_update/', 'RecipeController@material_update')->name('recipe.material_update');
 Route::get('/recipe/process_edit/{recipe_id}', 'RecipeController@process_edit');
+Route::post('/recipe/process_update/', 'RecipeController@process_update')->name('recipe.process_update');
 Route::delete('/recipe/delete', 'RecipeController@delete')->name('recipe.delete');
