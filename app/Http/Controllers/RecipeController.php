@@ -119,6 +119,22 @@ class RecipeController extends Controller
         return view('recipe.recipe_edit', compact('recipe', 'user'));
     }
 
+    public function recipe_update (Request $request)
+    {
+        $recipe_id = $request->recipe_id;
+        $uploadImg = $request->image;
+        $filePath = $uploadImg->store('public');
+        $image = str_replace('public/', '', $filePath);
+        Recipe::find($recipe_id)
+        ->update(['title' => $request->title, 'image' => $image, 'description'=> $request->description]);
+        $recipe = Recipe::find($recipe_id);
+        $user = Recipe::find($recipe_id)->user;
+        $materials = Recipe::find($recipe_id)->materials;
+        $processes = Recipe::find($recipe_id)->processes->sortBy('order');
+        return view('recipe.edit', compact('recipe', 'user', 'materials', 'processes'));
+    }
+
+
     public function material_edit ($recipe_id)
     {
         $recipe = Recipe::find($recipe_id);

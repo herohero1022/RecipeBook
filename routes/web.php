@@ -35,6 +35,7 @@ Route::patch('/recipe/preview_store', 'RecipeController@preview_store')->name('r
 Route::post('/recipe/close', 'RecipeController@close')->name('recipe.close');
 Route::get('/recipe/edit/{recipe_id}', 'RecipeController@edit');
 Route::get('/recipe/recipe_edit/{recipe_id}', 'RecipeController@recipe_edit');
+Route::patch('/recipe/recipe_update/', 'RecipeController@recipe_update')->name('recipe.update');
 Route::get('/recipe/matrial_edit/{recipe_id}', 'RecipeController@material_edit');
 Route::post('/recipe/matrial_update/', 'RecipeController@material_update')->name('recipe.material_update');
 Route::get('/recipe/process_edit/{recipe_id}', 'RecipeController@process_edit');
