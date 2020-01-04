@@ -11,6 +11,13 @@ use Illuminate\Support\Facades\Auth;
 
 class RecipeController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth')
+        ->except(['index', 'test']);
+    }
+
     public function index()
     {
         $recipes = Recipe::where('status', 'open')->get();
@@ -96,5 +103,9 @@ class RecipeController extends Controller
         $recipe = Recipe::find($request->recipe_id);
         $recipe->delete();
         return redirect('/recipe');
+    }
+
+    public function test() {
+        return view('recipe.test');
     }
 }
