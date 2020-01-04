@@ -59,7 +59,7 @@
             <div class="main-content-process-text">
               作り方
             </div>
-            <form method="POST" action="{{ route('recipe.process_store') }}" class="process-content-box">
+            <form method="POST" action="{{ route('process.store') }}" class="process-content-box">
             @csrf
               <input type="hidden" name="recipe_id" value="{{$recipe->id}}"/>
               <div class="process-form-erea" id="process-form-erea">
@@ -68,7 +68,7 @@
                     <div class="process-form-box-minus">
                       ー
                     </div>
-                    <input type="hidden" name="order[]" class="input-erea-number" value="">
+                    <input type="hidden" name="order[]" class="input-erea-number" value="1">
                     <div class="order-number">
                       1
                     </div>

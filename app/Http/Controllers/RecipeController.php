@@ -17,10 +17,10 @@ class RecipeController extends Controller
         return view('recipe.index',['recipes' => $recipes]);
     }
 
-    public function step1()
+    public function new()
     {
         $user = Auth::user();
-        return view('recipe.step1',['user' => $user]);
+        return view('recipe.new',['user' => $user]);
     }
 
     public function store(Request $request)
@@ -35,49 +35,7 @@ class RecipeController extends Controller
         $recipe->status = $request->status;
         $recipe->save();
         $id = $recipe->id;
-        return redirect()->route('recipe.step2', ['id' => $id]);
-    }
-
-    public function step2($id)
-    {
-        $recipe_id = $id;
-        return view('recipe.step2', ['recipe_id' => $recipe_id]);
-    }
-
-    public function material_store(Request $request)
-    {
-        $number = count($request->ingredients);
-        $recipe_id = $request->recipe_id;
-        for ($n = 0; $n < $number; $n++) {
-        $material = new Material;
-        $material->recipe_id = $recipe_id;
-        $material->ingredients = $request->ingredients[$n];
-        $material->quantity = $request->quantity[$n];
-        $material->save();
-        }
-        return redirect()->route('recipe.step3', ['recipe_id' => $recipe_id]);
-    }
-
-    public function step3($recipe_id)
-    {
-        $recipe = Recipe::find($recipe_id);
-        $user = Recipe::find($recipe_id)->user;
-        $materials = Recipe::find($recipe_id)->materials;
-        return view('recipe.step3', compact('recipe', 'user', 'materials'));
-    }
-
-    public function process_store(Request $request)
-    {
-        $number = count($request->order);
-        $recipe_id = $request->recipe_id;
-        for ($n = 0; $n < $number; $n++) {
-        $process = new Process;
-        $process->recipe_id = $recipe_id;
-        $process->order = $request->order[$n];
-        $process->process = $request->process[$n];
-        $process->save();
-        }
-        return redirect()->route('recipe.preview', ['recipe_id' => $recipe_id]);
+        return redirect()->route('material.new', ['id' => $id]);
     }
 
     public function preview($recipe_id)
@@ -127,62 +85,6 @@ class RecipeController extends Controller
         $image = str_replace('public/', '', $filePath);
         Recipe::find($recipe_id)
         ->update(['title' => $request->title, 'image' => $image, 'description'=> $request->description]);
-        $recipe = Recipe::find($recipe_id);
-        $user = Recipe::find($recipe_id)->user;
-        $materials = Recipe::find($recipe_id)->materials;
-        $processes = Recipe::find($recipe_id)->processes->sortBy('order');
-        return view('recipe.edit', compact('recipe', 'user', 'materials', 'processes'));
-    }
-
-
-    public function material_edit ($recipe_id)
-    {
-        $recipe = Recipe::find($recipe_id);
-        $user = Recipe::find($recipe_id)->user;
-        $materials = Recipe::find($recipe_id)->materials;
-        return view('recipe.material_edit', compact('recipe', 'user', 'materials'));
-    }
-
-    public function material_update (Request $request)
-    {
-        $material = Material::where('recipe_id','=',$request->recipe_id)->delete();
-        $number = count($request->ingredients);
-        $recipe_id = $request->recipe_id;
-        for ($n = 0; $n < $number; $n++) {
-        $material = new Material;
-        $material->recipe_id = $recipe_id;
-        $material->ingredients = $request->ingredients[$n];
-        $material->quantity = $request->quantity[$n];
-        $material->save();
-        }
-        $recipe = Recipe::find($recipe_id);
-        $user = Recipe::find($recipe_id)->user;
-        $materials = Recipe::find($recipe_id)->materials;
-        $processes = Recipe::find($recipe_id)->processes->sortBy('order');
-        return view('recipe.edit', compact('recipe', 'user', 'materials', 'processes'));
-    }
-
-    public function process_edit ($recipe_id)
-    {
-        $recipe = Recipe::find($recipe_id);
-        $user = Recipe::find($recipe_id)->user;
-        $materials = Recipe::find($recipe_id)->materials;
-        $processes = Recipe::find($recipe_id)->processes->sortBy('order');
-        return view('recipe.process_edit', compact('recipe', 'user', 'materials', 'processes'));
-    }
-
-    public function process_update (Request $request)
-    {
-        $process = Process::where('recipe_id','=',$request->recipe_id)->delete();
-        $number = count($request->order);
-        $recipe_id = $request->recipe_id;
-        for ($n = 0; $n < $number; $n++) {
-        $process = new Process;
-        $process->recipe_id = $recipe_id;
-        $process->process = $request->process[$n];
-        $process->order = $request->order[$n];
-        $process->save();
-        }
         $recipe = Recipe::find($recipe_id);
         $user = Recipe::find($recipe_id)->user;
         $materials = Recipe::find($recipe_id)->materials;

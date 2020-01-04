@@ -59,7 +59,7 @@
             <div class="main-content-process-text">
               作り方
             </div>
-            <form method="POST" action="{{ route('recipe.process_update') }}" class="process-content-box">
+            <form method="POST" action="{{ route('process.update') }}" class="process-content-box">
             @csrf
               <input type="hidden" name="recipe_id" value="{{$recipe->id}}"/>
               <div class="process-form-erea" id="process-form-erea">

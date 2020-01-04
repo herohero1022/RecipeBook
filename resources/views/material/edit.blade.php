@@ -32,7 +32,7 @@
             <div class="material-content-title">
               材料の登録
             </div>
-            <form method="POST" action="{{ route('recipe.material_store') }}" class="material-content-box">
+            <form method="POST" action="{{ route('material.update') }}" class="material-content-box">
               @csrf
               <div class="material-content-box-top">
                 <div class="content-box-ingredients">
@@ -43,22 +43,24 @@
                 </div>
               </div>
               <div class="material-form-erea" id="material-form-erea">
-                <div class="material-form-box">
-                  <input type="hidden" name="recipe_id" value="{{$recipe_id}}"/>
-                  <div class="material-input-box">
-                    <input type="text" name="ingredients[]" placeholder="例：鳥もも肉" class="input-erea">
-                    <input type="text" name="quantity[]" placeholder="例：250g" class="input-erea">
-                    <div class="form-box-minus">
-                      ー
+                @foreach($materials as $material)
+                  <div class="material-form-box">
+                    <input type="hidden" name="recipe_id" value="{{$recipe->id}}"/>
+                    <div class="material-input-box">
+                    <input type="text" name="ingredients[]" placeholder="例：鳥もも肉" class="input-erea" value="{{$material->ingredients}}">
+                      <input type="text" name="quantity[]" placeholder="例：250g" class="input-erea" value="{{$material->quantity}}">
+                      <div class="form-box-minus">
+                        ー
+                      </div>
                     </div>
                   </div>
-                </div>
+                @endforeach
               </div>
               <div class="form-box-plus" id="material-form-box-plus">
                 +
               </div>
               <button type="submit" class="material-submit-btn">
-                作り方の入力に進む
+                変更する
               </button>
               </div>
             </form>

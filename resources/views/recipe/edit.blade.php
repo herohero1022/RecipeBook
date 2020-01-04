@@ -47,7 +47,7 @@
                 <div class="material-table-text">
                   材料
                 </div>
-                <a href="{{ action('RecipeController@material_edit', $recipe->id) }}" class="material-edit-link">編集する</a>
+                <a href="{{ action('MaterialController@edit', $recipe->id) }}" class="material-edit-link">編集する</a>
                 </div>
               <table class="material-table">
                 @foreach($materials as $material)
@@ -64,7 +64,7 @@
               <div class="main-content-edit-text">
                 作り方
               </div>
-              <a href="{{ action('RecipeController@process_edit', $recipe->id) }}" class="process-edit-link">編集する</a>
+              <a href="{{ action('ProcessController@edit', $recipe->id) }}" class="process-edit-link">編集する</a>
             </div>
             <div class="main-content-edit">
               @foreach($processes as $process)

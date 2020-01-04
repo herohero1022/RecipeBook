@@ -34,7 +34,7 @@
         @foreach ($recipes as $recipe)
         <div class="main-content">
           <div class="main-content-image">
-            <img src="{{ asset('storage/' . $recipe->image) }}" alt="image" style="width: 120px;"/>
+            <img src="{{ asset('storage/' . $recipe->image) }}" alt="image" style="width: 120px; height: 120px;"/>
           </div>
           <div class="main-content-box">
             <div class="content-box-title">
