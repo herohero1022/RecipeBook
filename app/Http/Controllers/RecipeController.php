@@ -17,10 +17,10 @@ class RecipeController extends Controller
         return view('recipe.index',['recipes' => $recipes]);
     }
 
-    public function step1()
+    public function new()
     {
         $user = Auth::user();
-        return view('recipe.step1',['user' => $user]);
+        return view('recipe.new',['user' => $user]);
     }
 
     public function store(Request $request)
