@@ -64,7 +64,7 @@
               <div class="main-content-edit-text">
                 作り方
               </div>
-              <a href="{{ action('RecipeController@process_edit', $recipe->id) }}" class="process-edit-link">編集する</a>
+              <a href="{{ action('ProcessController@process_edit', $recipe->id) }}" class="process-edit-link">編集する</a>
             </div>
             <div class="main-content-edit">
               @foreach($processes as $process)
