@@ -10,13 +10,13 @@ use App\Process;
 
 class MaterialController extends Controller
 {
-    public function step2($id)
+    public function new($id)
     {
         $recipe_id = $id;
-        return view('recipe.step2', ['recipe_id' => $recipe_id]);
+        return view('material.new', ['recipe_id' => $recipe_id]);
     }
 
-    public function material_store(Request $request)
+    public function store(Request $request)
     {
         $number = count($request->ingredients);
         $recipe_id = $request->recipe_id;
@@ -30,15 +30,15 @@ class MaterialController extends Controller
         return redirect()->route('recipe.step3', ['recipe_id' => $recipe_id]);
     }
 
-    public function material_edit ($recipe_id)
+    public function edit ($recipe_id)
     {
         $recipe = Recipe::find($recipe_id);
         $user = Recipe::find($recipe_id)->user;
         $materials = Recipe::find($recipe_id)->materials;
-        return view('recipe.material_edit', compact('recipe', 'user', 'materials'));
+        return view('material.edit', compact('recipe', 'user', 'materials'));
     }
 
-    public function material_update (Request $request)
+    public function update (Request $request)
     {
         $material = Material::where('recipe_id','=',$request->recipe_id)->delete();
         $number = count($request->ingredients);

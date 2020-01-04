@@ -35,7 +35,7 @@ class RecipeController extends Controller
         $recipe->status = $request->status;
         $recipe->save();
         $id = $recipe->id;
-        return redirect()->route('recipe.step2', ['id' => $id]);
+        return redirect()->route('material.new', ['id' => $id]);
     }
 
     public function step3($recipe_id)
