@@ -97,4 +97,8 @@ class RecipeController extends Controller
         $recipe->delete();
         return redirect('/recipe');
     }
+
+    public function test() {
+        return view('recipe.test');
+    }
 }

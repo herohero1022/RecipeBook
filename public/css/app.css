@@ -66,6 +66,7 @@ body {
   background-color: red;
   color: white;
   text-align: center;
+  text-decoration: none;
   border-radius: 4px;
   line-height: 40px;
   margin-right: 20px;
@@ -76,6 +77,7 @@ body {
   width: 80px;
   color: lightblue;
   text-align: center;
+  text-decoration: none;
   line-height: 40px;
   border-radius: 4px;
   border: solid 1px lightblue;
@@ -881,6 +883,94 @@ body {
   display: block;
   margin-bottom: 20px;
   margin-right: 20px;
+}
+
+.register-contents {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+}
+
+.register-contents .register-header {
+  height: 100px;
+  font-size: 35px;
+  font-weight: bold;
+  line-height: 100px;
+  text-align: center;
+}
+
+.register-contents .register-main {
+  margin: 20px 0;
+}
+
+.register-contents .register-main-content {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  background-color: #f8f8f8;
+  width: 40%;
+  margin: 10px auto;
+}
+
+.register-contents .register-main-content-text {
+  height: 100px;
+  font-size: 25px;
+  font-weight: bold;
+  line-height: 100px;
+  text-align: center;
+  border-bottom: 1px lightgray solid;
+  margin-bottom: 20px;
+}
+
+.register-contents .register-main-content .form-box {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.register-contents .register-main-content .form-box .form-group {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  margin: 20px 0;
+}
+
+.register-contents .register-main-content .form-box .form-group .form-controll-text {
+  font-size: 17px;
+}
+
+.register-contents .register-main-content .form-box .form-group .input-control {
+  height: 45px;
+}
+
+.register-contents .register-main-content .form-box .register-btn {
+  width: 130px;
+  height: 50px;
+  background-color: blue;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 5px;
+  margin: 40px auto;
+  display: block;
+}
+
+.register-contents .register-footer {
+  height: 50px;
+  font-size: 12px;
+  line-height: 50px;
+  text-align: center;
 }
 
 /*!

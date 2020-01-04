@@ -11,20 +11,44 @@
     <div class="home-header">
       <div class="header-contents">
         <div class="header-contents-top">
-          <h2 class="header-contents-top-title">RecipeBock</h2>
+          <h2 class="header-contents-top-title">RecipeBook</h2>
           <div class="header-contents-top-serch">
             レシピを検索
             <i class="fas fa-search"></i>
           </div>
         </div>
-        <div class="header-contents-bottom">
-          <div class="header-contents-bottom-regibtn">
-            新規会員登録
+        @auth
+          <div class="header-contents-bottom">
+            <a href="{{ route('recipe.new') }}">
+              <div class="header-contents-bottom-regibtn">
+                レシピを書く
+              </div>
+            </a>
+            <a href="{{ route('logout') }}"
+              class="header-contents-bottom-loginbtn"
+              onclick="event.preventDefault();
+              document.getElementById('logout-form').submit();">
+              ログアウト
+            </a>
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                @csrf
+            </form>
           </div>
-          <div class="header-contents-bottom-loginbtn">
-            ログイン
+        @endauth
+        @guest
+          <div class="header-contents-bottom">
+            <a href="{{ route('register') }}">
+            <div class="header-contents-bottom-regibtn">
+              新規会員登録
+            </div>
+            </a>
+            <a href="{{ route('login') }}">
+            <div class="header-contents-bottom-loginbtn">
+              ログイン
+            </div>
+            </a>
           </div>
-        </div>
+        @endguest
       </div>
     </div>
     <div class="home-contents">

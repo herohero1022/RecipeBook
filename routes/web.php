@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'RecipeController@index');
 
 // Route::get('home', 'HomeController@index');
 
@@ -24,7 +22,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/user', 'UserController@show');
 
 Route::get('/recipe', 'RecipeController@index');
-Route::get('/recipe/new', 'RecipeController@new');
+Route::get('/recipe/test', 'RecipeController@test');
+Route::get('/recipe/new', 'RecipeController@new')->name('recipe.new');
 Route::post('/recipe/store', 'RecipeController@store')->name('recipe.store');
 Route::get('/recipe/preview/{recipe_id}', 'RecipeController@preview')->name('recipe.preview');
 Route::patch('/recipe/preview_store', 'RecipeController@preview_store')->name('recipe.preview_store');
