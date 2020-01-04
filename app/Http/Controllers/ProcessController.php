@@ -10,6 +10,12 @@ use App\Process;
 
 class ProcessController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function new($recipe_id)
     {
         $recipe = Recipe::find($recipe_id);

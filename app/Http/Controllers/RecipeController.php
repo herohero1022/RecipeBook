@@ -11,6 +11,13 @@ use Illuminate\Support\Facades\Auth;
 
 class RecipeController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth')
+        ->except(['index', 'test']);
+    }
+
     public function index()
     {
         $recipes = Recipe::where('status', 'open')->get();

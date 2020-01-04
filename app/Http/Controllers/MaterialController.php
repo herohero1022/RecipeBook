@@ -10,6 +10,12 @@ use App\Process;
 
 class MaterialController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function new($id)
     {
         $recipe_id = $id;
