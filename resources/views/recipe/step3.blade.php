@@ -68,7 +68,7 @@
                     <div class="process-form-box-minus">
                       ー
                     </div>
-                    <input type="hidden" name="order[]" class="input-erea-number" value="">
+                    <input type="hidden" name="order[]" class="input-erea-number" value="1">
                     <div class="order-number">
                       1
                     </div>

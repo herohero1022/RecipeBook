@@ -47,7 +47,7 @@
                 <div class="material-table-text">
                   材料
                 </div>
-                <a href="{{ action('RecipeController@material_edit', $recipe->id) }}" class="material-edit-link">編集する</a>
+                <a href="{{ action('MaterialController@material_edit', $recipe->id) }}" class="material-edit-link">編集する</a>
                 </div>
               <table class="material-table">
                 @foreach($materials as $material)
