@@ -14,27 +14,16 @@
         <div class="register-main">
           <div class="register-main-content">
             <div class="register-main-content-text">
-              新規会員登録
+              ログイン情報の入力
             </div>
             <div class="form-box">
-              <form method="POST" action="{{ route('register') }}">
+              <form method="POST" action="{{ route('login') }}">
                 @csrf
-                <div class="form-group">
-                  <div class="form-controll-text">
-                    ニックネーム
-                  </div>
-                  <input id="name" type="text" class="input-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
-                  @error('name')
-                    <span class="invalid-feedback" role="alert">
-                      <strong>{{ $message }}</strong>
-                    </span>
-                  @enderror
-                </div>
                 <div class="form-group">
                   <div class="form-controll-text">
                     メールアドレス
                   </div>
-                  <input id="email" type="email" class="input-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+                  <input id="email" type="email" class="input-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
                   @error('email')
                     <span class="invalid-feedback" role="alert">
                       <strong>{{ $message }}</strong>
@@ -45,21 +34,15 @@
                   <div class="form-controll-text">
                     パスワード
                   </div>
-                  <input id="password" type="password" class="input-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+                  <input id="password" type="password" class="input-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
                   @error('password')
                     <span class="invalid-feedback" role="alert">
                       <strong>{{ $message }}</strong>
                     </span>
                   @enderror
                 </div>
-                <div class="form-group">
-                  <div class="form-controll-text">
-                    パスワード 再入力
-                  </div>
-                  <input id="password-confirm" type="password" class="input-control" name="password_confirmation" required autocomplete="new-password">
-                </div>
                 <button type="submit" class="register-btn">
-                  登録する
+                  ログイン
                 </button>
               </form>
             </div>
