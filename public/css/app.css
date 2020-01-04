@@ -695,6 +695,194 @@ body {
   margin: 0 auto 20px;
 }
 
+.edit-main-contents {
+  width: 70%;
+  background-color: white;
+  margin: 40px auto 40px;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
+}
+
+.edit-main-contents .edit-main-content {
+  width: calc(100% - 40px);
+  height: calc(100% - 40px);
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-pack: center;
+          justify-content: center;
+}
+
+.edit-main-contents .edit-main-content .edit-main-content-title {
+  height: 70px;
+}
+
+.edit-main-contents .edit-main-content .edit-main-content-title .title-box {
+  height: 100%;
+  display: -webkit-box;
+  display: flex;
+  border-bottom: gray 1px solid;
+}
+
+.edit-main-contents .edit-main-content .edit-main-content-title .title-box .recipe-title {
+  height: 100%;
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 70px;
+  color: yellowgreen;
+  margin-right: 10px;
+}
+
+.edit-main-contents .edit-main-content .edit-main-content-title .title-box .recipe-user {
+  font-size: 17px;
+  color: darkgray;
+  line-height: 70px;
+  margin-right: 10px;
+}
+
+.edit-main-contents .edit-main-content .edit-main-content-title .title-box .recipe-edit-link {
+  font-size: 17px;
+  color: deepskyblue;
+  line-height: 70px;
+  text-decoration: none;
+}
+
+.edit-main-contents .edit-main-content .edit-main-content-recipe {
+  display: -webkit-box;
+  display: flex;
+  margin: 20px 0;
+}
+
+.edit-main-contents .edit-main-content .edit-main-content-recipe img {
+  height: 400px;
+  margin-left: 100px;
+}
+
+.edit-main-contents .edit-main-content .edit-main-content-recipe .material-table-box {
+  margin-left: 200px;
+}
+
+.edit-main-contents .edit-main-content .edit-main-content-recipe .material-table-box .material-table-text-box {
+  display: -webkit-box;
+  display: flex;
+  border-bottom: gray 1px solid;
+}
+
+.edit-main-contents .edit-main-content .edit-main-content-recipe .material-table-box .material-table-text-box .material-table-text {
+  font-size: 20px;
+  font-weight: bold;
+  color: orange;
+  margin-right: 10px;
+}
+
+.edit-main-contents .edit-main-content .edit-main-content-recipe .material-table-box .material-table-text-box .material-edit-link {
+  font-size: 15px;
+  color: deepskyblue;
+  text-decoration: none;
+  line-height: 40px;
+}
+
+.edit-main-contents .edit-main-content .edit-main-content-recipe .material-table-box .material-table {
+  width: 200px;
+}
+
+.edit-main-contents .edit-main-content .edit-main-content-recipe .material-table-box .material-table tr {
+  margin: 7px 0;
+  border-bottom: gray 1px solid;
+}
+
+.edit-main-contents .edit-main-content .edit-main-content-edit {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  margin-bottom: 40px;
+}
+
+.edit-main-contents .edit-main-content .edit-main-content-edit .main-content-edit-text-box {
+  display: -webkit-box;
+  display: flex;
+}
+
+.edit-main-contents .edit-main-content .edit-main-content-edit .main-content-edit-text-box .main-content-edit-text {
+  height: 32px;
+  font-size: 20px;
+  font-weight: bold;
+  color: orange;
+  margin-right: 10px;
+}
+
+.edit-main-contents .edit-main-content .edit-main-content-edit .main-content-edit-text-box .process-edit-link {
+  font-size: 15px;
+  color: deepskyblue;
+  text-decoration: none;
+  line-height: 32px;
+}
+
+.edit-main-contents .edit-main-content .edit-main-content-edit .main-content-edit {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  margin-bottom: 10px;
+  border-bottom: black 1px solid;
+}
+
+.edit-main-contents .edit-main-content .edit-main-content-edit .main-content-edit .process-box {
+  display: -webkit-box;
+  display: flex;
+  margin: 20px 0;
+}
+
+.edit-main-contents .edit-main-content .edit-main-content-edit .main-content-edit .process-box .order-number {
+  width: 30px;
+  height: 40px;
+  font-size: 22px;
+  font-weight: bold;
+  color: orange;
+  text-align: center;
+  line-height: 40px;
+  margin: 0 10px;
+}
+
+.edit-main-contents .edit-main-content .edit-main-content-edit .main-content-edit .process-box .process-text {
+  width: 640px;
+  background-color: #f8f8f8;
+  border: black 1px solid;
+  border-radius: 4px;
+}
+
+.edit-main-contents .edit-main-content .form-btn-box {
+  width: 100%;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+}
+
+.edit-main-contents .edit-main-content .form-btn-box .prview-form .edit-btn {
+  width: 200px;
+  height: 60px;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 60px;
+  text-align: center;
+  background-color: gainsboro;
+  color: white;
+  display: block;
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+
 /*!
  * Bootstrap v4.4.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors

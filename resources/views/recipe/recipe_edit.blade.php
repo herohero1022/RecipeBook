@@ -31,15 +31,16 @@
           <div class="add-content-title">
             新しいレシピの登録
           </div>
-          <form method="POST" action="{{ route('recipe.store') }}" enctype="multipart/form-data" class="add-content-box">
+          <form method="POST" action="{{ route('recipe.update') }}" enctype="multipart/form-data" class="add-content-box">
+            {{ method_field('patch') }}
             @csrf
-            <input type="hidden" name="status" value="close"/>
+            <input type="hidden" name="recipe_id" value="{{$recipe->id}}"/>
             <input type="hidden" name="user_id" value="{{$user->id}}"/>
             <div class="form-box">
               <div class="form-box-text">
                 レシピのタイトル
               </div>
-              <input type="text" name="title" class="input-erea" placeholder="例：鳥もも肉のさっぱり煮">
+            <input type="text" name="title" class="input-erea" placeholder="例：鳥もも肉のさっぱり煮" value="{{$recipe->title}}">
             </div>
             <div class="form-box">
               <div class="form-box-text">
@@ -51,10 +52,10 @@
               <div class="form-box-text">
                 レシピのキャッチコピー
               </div>
-              <input type="text" name="description" class="input-erea"  placeholder="例：ポン酢で煮込む優しい口当たりの味付けです">
+            <input type="text" name="description" class="input-erea"  placeholder="例：ポン酢で煮込む優しい口当たりの味付けです" value="{{$recipe->description}}">
             </div>
             <button type="submit" class="add-submit-btn">
-              材料の入力に進む
+              編集する
             </button>
             </div>
           </form>

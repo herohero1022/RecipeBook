@@ -1,0 +1,145 @@
+.edit-main-contents {
+  width: 70%;
+  background-color: white;
+  margin: 40px auto 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+    .edit-main-content {
+      width: calc(100% - 40px);
+      height: calc(100% - 40px);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+        .edit-main-content-title {
+          height: 70px;
+            .title-box {
+              height: 100%;
+              display: flex;
+              border-bottom:gray 1px solid;
+                .recipe-title {
+                  height: 100%;
+                  font-size: 22px;
+                  font-weight: bold;
+                  line-height: 70px;
+                  color: yellowgreen;
+                  margin-right: 10px;
+                }
+                .recipe-user {
+                  font-size: 17px;
+                  color: darkgray;
+                  line-height: 70px;
+                  margin-right: 10px;
+                }
+                .recipe-edit-link {
+                  font-size: 17px;
+                  color: deepskyblue;
+                  line-height: 70px;
+                  text-decoration: none;
+                }
+            }
+        }
+        .edit-main-content-recipe {
+          display: flex;
+          margin: 20px 0;
+            img {
+              height: 400px;
+              margin-left: 100px;
+            }
+            .material-table-box {
+              margin-left: 200px;
+                .material-table-text-box {
+                  display: flex;
+                  border-bottom: gray 1px solid;
+                    .material-table-text {
+                      font-size: 20px;
+                      font-weight: bold;
+                      color: orange;
+                      margin-right: 10px;
+                    }
+                    .material-edit-link {
+                      font-size: 15px;
+                      color: deepskyblue;
+                      text-decoration: none;
+                      line-height: 40px;
+                    }
+                }
+                .material-table {
+                  width: 200px;
+                    tr {
+                      margin: 7px 0;
+                      border-bottom: gray 1px solid;
+                    }
+                }
+            }
+        }
+        .edit-main-content-edit {
+          display: flex;
+          flex-direction: column;
+          margin-bottom: 40px;
+            .main-content-edit-text-box{
+              display: flex;
+                .main-content-edit-text {
+                  height: 32px;
+                  font-size: 20px;
+                  font-weight: bold;
+                  color: orange;
+                  margin-right: 10px;
+                }
+                .process-edit-link {
+                  font-size: 15px;
+                  color: deepskyblue;
+                  text-decoration: none;
+                  line-height: 32px;
+                }
+            }
+            .main-content-edit {
+              display: flex;
+              flex-direction: column;
+              margin-bottom: 10px;
+              border-bottom: black 1px solid;
+                .process-box {
+                  display: flex;
+                  margin: 20px 0;
+                    .order-number {
+                      width: 30px;
+                      height: 40px;
+                      font-size: 22px;
+                      font-weight: bold;
+                      color: orange;
+                      text-align: center;
+                      line-height: 40px;
+                      margin: 0 10px;
+                    }
+                    .process-text {
+                      width: 640px;
+                      background-color: #f8f8f8;
+                      border: black 1px solid;
+                      border-radius: 4px;
+                    }
+                }
+            }
+        }
+        .form-btn-box {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+            .prview-form{
+                .edit-btn {
+                  width: 200px;
+                  height: 60px;
+                  border-radius: 8px;
+                  font-size: 18px;
+                  font-weight: bold;
+                  line-height: 60px;
+                  text-align: center;
+                  background-color: gainsboro;
+                  color: white;
+                  display: block;
+                  margin-bottom:20px;
+                  margin-right: 20px;
+                }
+            }
+        }
+    }
+}
