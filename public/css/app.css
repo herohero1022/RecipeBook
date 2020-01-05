@@ -270,6 +270,7 @@ body {
   font-size: 18px;
   line-height: 20px;
   color: limegreen;
+  overflow: scroll;
 }
 
 .home-contents .right-contents .right-content-box .content-box-user {
