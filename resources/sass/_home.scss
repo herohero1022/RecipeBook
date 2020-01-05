@@ -28,14 +28,20 @@ body {
               line-height: 40px;
               font-size: 30px;
             }
-            &-serch {
+            form {
+              width: 100%;
               height: 100%;
-              width: 80%;
-              line-height: 40px;
-              background-color: lightgray;
-              color: gray;
-              border-radius: 8px;
-              border: solid, 1px, black;
+              display: flex;
+              margin-bottom: 10px;
+                .header-contents-top-serch {
+                  height: 100%;
+                  width: 100%;
+                  line-height: 40px;
+                  background-color: lightgray;
+                  color: white;
+                  border-radius: 8px;
+                  border: solid, 1px, black;
+                }
             }
         }
         &-bottom {

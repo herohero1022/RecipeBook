@@ -12,7 +12,7 @@
       <div class="header-contents">
         <div class="header-contents-top">
           <h2 class="header-contents-top-title">RecipeBook</h2>
-          <form method="GET" action="{{ route('search.index') }}" class="form-box">
+          <form method="GET" action="{{ route('search.index') }}">
             <input type="text" name="keyword" placeholder="料理名か材料名を入力" class="header-contents-top-serch">
             <input type="submit" value="検索" >
             {{-- <div class="header-contents-top-serch">
