@@ -35,7 +35,6 @@ class RecipeController extends Controller
         $materials = Recipe::find($recipe_id)->materials;
         $processes = Recipe::find($recipe_id)->processes->sortBy('order');
         $currentuser = Auth::user();
-        eval(\Psy\sh());
         return view('recipe.show', compact('recipe', 'user', 'materials', 'processes', 'currentuser'));
     }
 
