@@ -6,7 +6,7 @@
       </title>
   </head>
   <body>
-    <div class="home-wrapper">
+    <div class="recipe-wrapper">
       <div class="register-contents">
         <div class="register-header">
           Recipebook

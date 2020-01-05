@@ -7,25 +7,9 @@
       </title>
   </head>
   <body>
-    <div class="home-wrapper">
-      <div class="home-header">
-        <div class="header-contents">
-          <div class="header-contents-top">
-            <h2 class="header-contents-top-title">RecipeBock</h2>
-            <div class="header-contents-top-serch">
-              レシピを検索
-              <i class="fas fa-search"></i>
-            </div>
-          </div>
-          <div class="header-contents-bottom">
-            <div class="header-contents-bottom-regibtn">
-              新規会員登録
-            </div>
-            <div class="header-contents-bottom-loginbtn">
-              ログイン
-            </div>
-          </div>
-        </div>
+    <div class="recipe-wrapper">
+      <div class="recipe-header">
+        Recipebook
       </div>
       <div class="process-main-contents">
         <div class="process-main-content">
@@ -87,6 +71,8 @@
             </form>
           </div>
         </div>
+      </div>
+      <div class="recipe-fotter">
       </div>
     </div>
   </body>
