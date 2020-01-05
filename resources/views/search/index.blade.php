@@ -77,6 +77,7 @@
           </div>
         </div>
         @endforeach
+        {{ $recipes->links() }}
       </div>
       <div class="right-contents">
         <h1>tesyto</h1>

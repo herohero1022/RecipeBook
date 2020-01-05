@@ -13,7 +13,7 @@ class SearchController extends Controller
         $data = Recipe::query();
         if(!empty($keyword))
         {   
-            $recipes = $data->where('title', 'like', '%'.$keyword.'%')->get();
+            $recipes = $data->where('title', 'like', '%'.$keyword.'%')->paginate(6);
 
         }else{
             $recipes = Recipe::all();

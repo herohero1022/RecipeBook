@@ -23,7 +23,7 @@ class RecipeController extends Controller
 
     public function index()
     {
-        $recipes = Recipe::where('status', 'open')->get();
+        $recipes = Recipe::where('status', 'open')->paginate(6);
         return view('recipe.index',['recipes' => $recipes]);
     }
 
