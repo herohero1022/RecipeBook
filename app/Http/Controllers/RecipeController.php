@@ -15,7 +15,7 @@ class RecipeController extends Controller
     public function __construct()
     {
         $this->middleware('auth')
-        ->except(['index', 'show']);
+        ->except(['index']);
 
         $this->middleware('checkuser')
         ->only(['edit', 'recipe_edit']);
@@ -26,7 +26,6 @@ class RecipeController extends Controller
         $recipes = Recipe::where('status', 'open')->paginate(6);
         $new_recipes = Recipe::where('status', 'open')->latest()->get();
         $currentuser = Auth::user();
-        $i = 1;
         return view('recipe.index', compact('recipes', 'new_recipes', 'currentuser'));
     }
 
@@ -36,6 +35,7 @@ class RecipeController extends Controller
         $materials = Recipe::find($recipe_id)->materials;
         $processes = Recipe::find($recipe_id)->processes->sortBy('order');
         $currentuser = Auth::user();
+        eval(\Psy\sh());
         return view('recipe.show', compact('recipe', 'user', 'materials', 'processes', 'currentuser'));
     }
 

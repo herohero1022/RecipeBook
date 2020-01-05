@@ -49,7 +49,6 @@
           </div>
         </div>
         <div class="register-footer">
-          copylight
         </div>
       </div>
     </div>
