@@ -42,3 +42,5 @@ Route::get('/process/new/{recipe_id}', 'ProcessController@new')->name('process.n
 Route::post('/process/store', 'ProcessController@store')->name('process.store');
 Route::get('/process/edit/{recipe_id}', 'ProcessController@edit')->name('process.edit');
 Route::post('/process/update/', 'ProcessController@update')->name('process.update');
+
+Route::get('/search', 'SearchController@index')->name('search.index');

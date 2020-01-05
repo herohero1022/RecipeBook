@@ -41,12 +41,20 @@ body {
   font-size: 30px;
 }
 
-.home-header .header-contents-top-serch {
+.home-header .header-contents-top form {
+  width: 100%;
   height: 100%;
-  width: 80%;
+  display: -webkit-box;
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.home-header .header-contents-top form .header-contents-top-serch {
+  height: 100%;
+  width: 100%;
   line-height: 40px;
   background-color: lightgray;
-  color: gray;
+  color: white;
   border-radius: 8px;
   border: solid, 1px, black;
 }
