@@ -16,6 +16,9 @@ class RecipeController extends Controller
     {
         $this->middleware('auth')
         ->except(['index', 'show']);
+
+        $this->middleware('checkuser')
+        ->only(['edit', 'recipe_edit']);
     }
 
     public function index()

@@ -14,6 +14,9 @@ class ProcessController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
+
+        $this->middleware('checkuser')
+        ->only(['edit']);
     }
 
     public function new($recipe_id)
