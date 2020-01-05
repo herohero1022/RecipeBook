@@ -22,7 +22,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/user', 'UserController@show');
 
 Route::get('/recipe', 'RecipeController@index');
-Route::get('/recipe/{recipe_id}', 'RecipeController@show')->name('recipe.show');
 Route::get('/recipe/test', 'RecipeController@test');
 Route::get('/recipe/new', 'RecipeController@new')->name('recipe.new');
 Route::post('/recipe/store', 'RecipeController@store')->name('recipe.store');
@@ -33,6 +32,7 @@ Route::get('/recipe/edit/{recipe_id}', 'RecipeController@edit');
 Route::get('/recipe/recipe_edit/{recipe_id}', 'RecipeController@recipe_edit');
 Route::patch('/recipe/recipe_update/', 'RecipeController@recipe_update')->name('recipe.update');
 Route::delete('/recipe/delete', 'RecipeController@delete')->name('recipe.delete');
+Route::get('/recipe/{recipe_id}', 'RecipeController@show')->name('recipe.show');
 
 Route::get('/material/new/{id}', 'MaterialController@new')->name('material.new');
 Route::post('/material/store', 'MaterialController@store')->name('material.store');
