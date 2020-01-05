@@ -106,7 +106,7 @@
           </div>
           <div class="right-content-box">
             <a href="{{ action('RecipeController@show', $new_recipe->id) }}" class="recipe-show-link">
-              <div class="content-box-title">
+              <div class="content-right-box-title">
                 {{$new_recipe->title}}
               </div>
             </a>
