@@ -913,6 +913,151 @@ body {
   margin-right: 20px;
 }
 
+.show-main-contents {
+  width: 70%;
+  background-color: white;
+  margin: 40px auto 40px;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
+}
+
+.show-main-contents .show-main-content {
+  width: calc(100% - 40px);
+  height: calc(100% - 40px);
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-pack: center;
+          justify-content: center;
+}
+
+.show-main-contents .show-main-content .show-main-content-title {
+  height: 70px;
+}
+
+.show-main-contents .show-main-content .show-main-content-title .title-box {
+  height: 100%;
+  display: -webkit-box;
+  display: flex;
+  border-bottom: gray 1px solid;
+}
+
+.show-main-contents .show-main-content .show-main-content-title .title-box .recipe-title {
+  height: 100%;
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 70px;
+  color: yellowgreen;
+  margin-right: 10px;
+}
+
+.show-main-contents .show-main-content .show-main-content-title .title-box .recipe-user {
+  font-size: 17px;
+  color: darkgray;
+  line-height: 70px;
+}
+
+.show-main-contents .show-main-content .show-main-content-recipe {
+  display: -webkit-box;
+  display: flex;
+  margin: 20px 0;
+}
+
+.show-main-contents .show-main-content .show-main-content-recipe img {
+  height: 400px;
+  margin-left: 100px;
+}
+
+.show-main-contents .show-main-content .show-main-content-recipe .material-table-box {
+  margin-left: 200px;
+}
+
+.show-main-contents .show-main-content .show-main-content-recipe .material-table-box .material-table-text {
+  font-size: 20px;
+  font-weight: bold;
+  color: orange;
+  margin-bottom: 10px;
+  border-bottom: gray 1px solid;
+}
+
+.show-main-contents .show-main-content .show-main-content-recipe .material-table-box .material-table {
+  width: 200px;
+}
+
+.show-main-contents .show-main-content .show-main-content-recipe .material-table-box .material-table tr {
+  margin: 7px 0;
+  border-bottom: gray 1px solid;
+}
+
+.show-main-contents .show-main-content .show-main-content-show {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  margin-bottom: 40px;
+}
+
+.show-main-contents .show-main-content .show-main-content-show .main-content-show-text {
+  font-size: 20px;
+  font-weight: bold;
+  color: orange;
+}
+
+.show-main-contents .show-main-content .show-main-content-show .main-content-show {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  margin-bottom: 10px;
+  border-bottom: black 1px solid;
+}
+
+.show-main-contents .show-main-content .show-main-content-show .main-content-show .process-box {
+  display: -webkit-box;
+  display: flex;
+  margin: 20px 0;
+}
+
+.show-main-contents .show-main-content .show-main-content-show .main-content-show .process-box .order-number {
+  width: 30px;
+  height: 40px;
+  font-size: 22px;
+  font-weight: bold;
+  color: orange;
+  text-align: center;
+  line-height: 40px;
+  margin: 0 10px;
+}
+
+.show-main-contents .show-main-content .show-main-content-show .main-content-show .process-box .process-text {
+  width: 640px;
+  background-color: #f8f8f8;
+  border: black 1px solid;
+  border-radius: 4px;
+}
+
+.show-main-contents .show-main-content .show-btn {
+  width: 200px;
+  height: 60px;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 60px;
+  text-align: center;
+  background-color: gainsboro;
+  color: white;
+  display: block;
+  margin: 0 auto 20px;
+}
+
 .register-contents {
   display: -webkit-box;
   display: flex;

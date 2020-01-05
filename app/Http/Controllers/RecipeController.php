@@ -15,13 +15,22 @@ class RecipeController extends Controller
     public function __construct()
     {
         $this->middleware('auth')
-        ->except(['index', 'test']);
+        ->except(['index', 'show']);
     }
 
     public function index()
     {
         $recipes = Recipe::where('status', 'open')->get();
         return view('recipe.index',['recipes' => $recipes]);
+    }
+
+    public function show($recipe_id) {
+        $recipe = Recipe::find($recipe_id);
+        $user = Recipe::find($recipe_id)->user;
+        $materials = Recipe::find($recipe_id)->materials;
+        $processes = Recipe::find($recipe_id)->processes->sortBy('order');
+        $currentuser = Auth::user();
+        return view('recipe.show', compact('recipe', 'user', 'materials', 'processes', 'currentuser'));
     }
 
     public function new()
