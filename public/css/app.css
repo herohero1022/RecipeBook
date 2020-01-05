@@ -169,6 +169,7 @@ body {
   font-size: 25px;
   line-height: 30px;
   color: limegreen;
+  overflow: scroll;
 }
 
 .home-contents .main-contents .main-content-box .content-box-user {
