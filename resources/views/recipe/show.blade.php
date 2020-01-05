@@ -11,9 +11,9 @@
       <div class="recipe-header">
         Recipebook
       </div>
-      <div class="preview-main-contents">
-        <div class="preview-main-content">
-          <div class="preview-main-content-title">
+      <div class="show-main-contents">
+        <div class="show-main-content">
+          <div class="show-main-content-title">
             <div class="title-box">
               <div class="recipe-title">
                 {{$recipe->title}}
@@ -23,7 +23,7 @@
               </div>
             </div>
           </div>
-          <div class="preview-main-content-recipe">
+          <div class="show-main-content-recipe">
             <img src="{{ asset('storage/' . $recipe->image) }}" alt="image" style="width: 40%; hight: auto;"/>
             <div class="material-table-box">
               <div class="material-table-text">
@@ -39,11 +39,11 @@
               </table>
             </div>
           </div>
-          <div class="preview-main-content-preview">
-            <div class="main-content-preview-text">
+          <div class="show-main-content-show">
+            <div class="main-content-show-text">
               作り方
             </div>
-            <div class="main-content-preview">
+            <div class="main-content-show">
               @foreach($processes as $process)
               <div class="process-box">
                 <div class="order-number">
@@ -56,15 +56,9 @@
               @endforeach
             </div>
           </div>
-          <form method="POST" action="{{ route('recipe.preview_store') }}" class="prview-form">
-            @csrf
-            {{ method_field('patch') }}
-            <input type="hidden" name="recipe_id" value="{{$recipe->id}}"/>
-            <input type="hidden" name="status" value="open">
-            <button type="submit" class="preview-btn">
-              レシピを公開する
-            </button>
-          </form>
+          @if($recipe->user_id == $currentuser->id)
+            <a href="{{ action('RecipeController@edit', $recipe->id) }}" class="show-btn">編集する</a>
+          @endif
         </div>
       </div>
       <div class="recipe-fotter">
