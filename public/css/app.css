@@ -79,6 +79,10 @@ body {
   bottom: 0;
 }
 
+.home-header .header-contents-bottom .header-btn {
+  text-decoration: none;
+}
+
 .home-header .header-contents-bottom-regibtn {
   height: 100%;
   width: 100px;

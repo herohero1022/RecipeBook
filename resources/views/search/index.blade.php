@@ -22,7 +22,7 @@
             <div class="username">
               こんにちは！{{$currentuser->name}}さん
             </div>
-            <a href="{{ route('recipe.new') }}">
+            <a href="{{ route('recipe.new') }}" class="header-btn">
               <div class="header-contents-bottom-regibtn">
                 レシピを書く
               </div>
@@ -40,12 +40,12 @@
         @endauth
         @guest
           <div class="header-contents-bottom">
-            <a href="{{ route('register') }}">
+            <a href="{{ route('register') }}" class="header-btn">
             <div class="header-contents-bottom-regibtn">
               新規会員登録
             </div>
             </a>
-            <a href="{{ route('login') }}">
+            <a href="{{ route('login') }}" class="header-btn">
             <div class="header-contents-bottom-loginbtn">
               ログイン
             </div>
