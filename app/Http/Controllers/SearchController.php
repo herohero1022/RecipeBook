@@ -19,7 +19,7 @@ class SearchController extends Controller
             $recipes = $data->where('title', 'like', '%'.$keyword.'%')->paginate(6);
 
         }else{
-            $recipes = Recipe::all();
+            $recipes = Recipe::paginate(6);
         }
         return view('search.index', compact('recipes', 'keyword', 'currentuser', 'new_recipes'));
     }

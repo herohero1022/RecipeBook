@@ -95,6 +95,8 @@
         }
         .prview-form{
           width: 100%;
+          display: flex;
+          justify-content: center;
             .preview-btn {
               width: 200px;
               height: 60px;
@@ -106,7 +108,9 @@
               background-color: gainsboro;
               color: white;
               display: block;
-              margin: 0 auto 20px;
+              margin-right: 30px;
+              margin-bottom: 20px;
+              text-decoration: none;
             }
         }
     }

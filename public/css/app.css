@@ -830,6 +830,10 @@ body {
 
 .preview-main-contents .preview-main-content .prview-form {
   width: 100%;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
 }
 
 .preview-main-contents .preview-main-content .prview-form .preview-btn {
@@ -843,7 +847,9 @@ body {
   background-color: gainsboro;
   color: white;
   display: block;
-  margin: 0 auto 20px;
+  margin-right: 30px;
+  margin-bottom: 20px;
+  text-decoration: none;
 }
 
 .edit-main-contents {

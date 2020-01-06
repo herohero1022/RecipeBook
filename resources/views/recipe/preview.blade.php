@@ -63,9 +63,10 @@
             {{ method_field('patch') }}
             <input type="hidden" name="recipe_id" value="{{$recipe->id}}"/>
             <input type="hidden" name="status" value="open">
-            <button type="submit" class="preview-btn">
-              レシピを公開する
-            </button>
+              <button type="submit" class="preview-btn">
+                レシピを公開する
+              </button>
+              <a href="{{ action('RecipeController@edit', $recipe->id) }}" class="preview-btn">編集する</a>
           </form>
         </div>
       </div>

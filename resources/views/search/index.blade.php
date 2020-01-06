@@ -56,9 +56,15 @@
     </div>
     <div class="home-contents">
       <div class="main-contents">
-        <div class="main-contents-text">
-          {{$keyword}}の検索結果
-        </div>
+        @if(!empty($keyword))
+          <div class="main-contents-text">
+            {{$keyword}}の検索結果
+          </div>
+        @else
+          <div class="main-contents-text">
+            レシピの一覧
+          </div>
+        @endif
         @foreach ($recipes as $recipe)
         <div class="main-content">
           <div class="main-content-image">
