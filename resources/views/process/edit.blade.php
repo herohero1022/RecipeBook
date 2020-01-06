@@ -9,7 +9,9 @@
   <body>
     <div class="recipe-wrapper">
       <div class="recipe-header">
-        Recipebook
+          <a href="{{ action('RecipeController@index') }}" class="header-logo">
+            Recipebook
+          </a>
       </div>
       <div class="process-main-contents">
         <div class="process-main-content">

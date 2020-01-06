@@ -305,6 +305,11 @@ body {
   text-align: center;
 }
 
+.recipe-header .header-logo {
+  text-decoration: none;
+  color: black;
+}
+
 .add-main-contents {
   width: 70%;
   background-color: white;

@@ -8,8 +8,10 @@
   <body>
     <div class="home-wrapper">
       <div class="register-contents">
-        <div class="register-header">
-          Recipebook
+        <div class="recipe-header">
+          <a href="{{ action('RecipeController@index') }}" class="header-logo">
+            Recipebook
+          </a>
         </div>
         <div class="register-main">
           <div class="register-main-content">
