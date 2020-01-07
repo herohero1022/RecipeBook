@@ -76,9 +76,11 @@
                 {{$recipe->title}}
               </div>
             </a>
-            <div class="content-box-user">
-              by {{$recipe->user->name}}
-            </div>
+            <a href="{{ action('UserController@show', $recipe->user->id) }}" class="recipe-show-link">
+              <div class="content-box-user">
+                by {{$recipe->user->name}}
+              </div>
+            </a>
             <div class="content-box-text">
               {!!  nl2br($recipe->description) !!}
             </div>
@@ -116,9 +118,11 @@
                 {{$new_recipe->title}}
               </div>
             </a>
-            <div class="content-box-user">
-              by {{$new_recipe->user->name}}
-            </div>
+            <a href="{{ action('UserController@show', $recipe->user->id) }}" class="recipe-show-link">
+              <div class="content-box-user">
+                by {{$new_recipe->user->name}}
+              </div>
+            </a>
             <div class="content-box-text">
               {!!  nl2br($new_recipe->description) !!}
             </div>
