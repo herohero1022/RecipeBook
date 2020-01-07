@@ -176,7 +176,7 @@ body {
   overflow: scroll;
 }
 
-.home-contents .main-contents .main-content-box .content-box-user {
+.home-contents .main-contents .main-content-box .recipe-show-link .content-box-user {
   width: 100%;
   height: 20px;
   margin: 5px 0;
@@ -277,7 +277,7 @@ body {
   overflow: scroll;
 }
 
-.home-contents .right-contents .right-content-box .content-box-user {
+.home-contents .right-contents .right-content-box .recipe-show-link .content-box-user {
   width: 100%;
   height: 14px;
   margin: 5px 0;
