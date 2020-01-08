@@ -23,10 +23,10 @@ class UserController extends Controller
         $user = User::find($user_id);
         if ($currentuser->id == $user->id) {
             $recipes = Recipe::where('user_id', $user->id)->paginate(6);
-            $new_recipes = Recipe::where('user_id', $user->id)->latest()->get();
+            $new_recipes = Recipe::all()->where('user_id', $user->id)->sortByDesc('id')->take(9);
         }else {
             $recipes = Recipe::where('user_id', $user->id)->where('status', 'open')->paginate(6);
-            $new_recipes = Recipe::where('user_id', $user->id)->where('status', 'open')->latest()->get();
+            $new_recipes = Recipe::all()->where('user_id', $user->id)->where('status', 'open')->sortByDesc('id')->take(9);
         }
         return view('user.show', compact('currentuser', 'user', 'recipes', 'new_recipes'));
     }

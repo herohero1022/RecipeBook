@@ -11,7 +11,7 @@ class SearchController extends Controller
 {
     public function index(Request $request) {
         $currentuser = Auth::user();
-        $new_recipes = Recipe::where('status', 'open')->latest()->get();
+        $new_recipes = Recipe::all()->where('status', 'open')->sortByDesc('id')->take(9);
         $keyword = $request->input('keyword');
         $data = Recipe::query();
         if(!empty($keyword))

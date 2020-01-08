@@ -122,9 +122,6 @@
             </div>
           </div>
         </div>
-        @if ($loop->index == 8)
-          @break
-        @endif
         @endforeach
       </div>
     </div>

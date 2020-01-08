@@ -24,7 +24,7 @@ class RecipeController extends Controller
     public function index()
     {
         $recipes = Recipe::where('status', 'open')->paginate(6);
-        $new_recipes = Recipe::where('status', 'open')->latest()->get();
+        $new_recipes = Recipe::all()->where('status', 'open')->sortByDesc('id')->take(9);
         $currentuser = Auth::user();
         return view('recipe.index', compact('recipes', 'new_recipes', 'currentuser'));
     }
