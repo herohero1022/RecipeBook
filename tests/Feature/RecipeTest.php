@@ -30,4 +30,18 @@ class RecipeTest extends TestCase
         $response = $this->actingAs($user)->get('recipe/new');
         $response->assertStatus(200);
     }
+
+    public function testCreate()
+    {
+        $user = factory(User::class)->create();
+        $response = $this->post('/recipe/store', [
+            'user_id' => '$user->id',
+            'title' => 'aaaa',
+            'image' => 'aaaa',
+            'description' => 'aaaa',
+            'status' => 'open'
+        ]);
+        $response->assertRedirect('/material/new/1');
+    }
+
 }
