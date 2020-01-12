@@ -4,13 +4,15 @@ namespace Tests\Feature;
 
 use Tests\TestCase;
 use App\User;
+use App\Recipe;
+use App\Materials;
+use App\Process;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Faker\Generator as Faker;
 
 class RecipeTest extends TestCase
 {
-    use RefreshDatabase;
 
     /**
      * A basic feature test example.
@@ -26,37 +28,36 @@ class RecipeTest extends TestCase
 
     public function testNew()
     {
-        $user = factory(User::class)->create();
+        $user = User::find(5);
         $response = $this->actingAs($user)->get('recipe/new');
         $response->assertStatus(200);
     }
 
-    public function testCreate()
-    {
-        $user = factory(User::class)->create();
-        // $response = $this->post('/recipe/store', [
-        //     'user_id' => '$user->id',
-        //     'title' => 'aaaa',
-        //     'image' => 'aaaa',
-        //     'description' => 'aaaa',
-        //     'status' => 'open'
-        // ]);
-        $response->assertRedirect('/material/new/1');
-    }
-
     public function testPreview()
     {
-        $user = factory(User::class)->create();
-        $response = $this->actingAs($user)->get('recipe/preview');
+        $user = User::find(5);
+        $recipe = Recipe::find(1);
+        $materials = $recipe->materials;
+        $processes = $recipe->processes;
+        $response = $this->actingAs($user)->get('recipe/preview/1');
         $response->assertStatus(200);
     }
 
-    public function testSearch()
+    public function testEdit()
     {
-        $user = factory(User::class)->create();
-        $response = $this->actingAs($user)->get('search/index', [
-            'keyword' => 'コロッケ'
-        ]);
+        $user = User::find(5);
+        $recipe = Recipe::find(1);
+        $materials = $recipe->materials;
+        $processes = $recipe->processes;
+        $response = $this->actingAs($user)->get('recipe/edit/1');
+        $response->assertStatus(200);
+    }
+
+    public function testRecipeEdit()
+    {
+        $user = User::find(5);
+        $recipe = Recipe::find(1);
+        $response = $this->actingAs($user)->get('recipe/recipe_edit/1');
         $response->assertStatus(200);
     }
 
