@@ -46,3 +46,6 @@ Route::get('/process/edit/{recipe_id}', 'ProcessController@edit')->name('process
 Route::post('/process/update/', 'ProcessController@update')->name('process.update');
 
 Route::get('/search', 'SearchController@index')->name('search.index');
+
+Route::get('/login/github', 'Auth\LoginController@redirectToProvider');
+Route::get('/login/github/callback', 'Auth\LoginController@handleProviderCallback');

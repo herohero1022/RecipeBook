@@ -48,6 +48,7 @@
                 </button>
               </form>
             </div>
+            <a href="{{ url('login/github') }}">Login with GitHub</a>
           </div>
         </div>
         <div class="register-footer">
