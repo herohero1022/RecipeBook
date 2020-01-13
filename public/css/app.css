@@ -1266,11 +1266,11 @@ body {
   display: block;
 }
 
-.register-contents .register-main-content .form-box .github-btn-box {
+.register-contents .register-main-content .form-box .github-btn-link {
   text-decoration: none;
 }
 
-.register-contents .register-main-content .form-box .github-btn-box .github-btn {
+.register-contents .register-main-content .form-box .github-btn-link .github-btn {
   width: 240px;
   height: 40px;
   background-color: lightgray;
