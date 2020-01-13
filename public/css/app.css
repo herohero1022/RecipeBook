@@ -1262,7 +1262,24 @@ body {
   text-align: center;
   line-height: 50px;
   border-radius: 5px;
-  margin: 40px auto;
+  margin: 40px auto 20px;
+  display: block;
+}
+
+.register-contents .register-main-content .form-box .github-btn-box {
+  text-decoration: none;
+}
+
+.register-contents .register-main-content .form-box .github-btn-box .github-btn {
+  width: 240px;
+  height: 40px;
+  background-color: lightgray;
+  color: white;
+  font-size: 18px;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 5px;
+  margin: 20px auto 30px;
   display: block;
 }
 

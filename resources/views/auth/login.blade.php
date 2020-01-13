@@ -46,6 +46,11 @@
                 <button type="submit" class="register-btn">
                   ログイン
                 </button>
+                <a href="{{ url('login/github') }}" class="github-btn-box">
+                  <div class="github-btn">
+                    GitHubアカウントでログイン
+                  </div>
+                </a>
               </form>
             </div>
           </div>
