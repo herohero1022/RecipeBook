@@ -68,6 +68,11 @@
                     GitHubアカウントで登録
                   </div>
                 </a>
+                <a href="{{ url('login/github') }}">
+                <div class="google-btn">
+                    Googleアカウントで登録
+                </div>
+                </a>
               </form>
             </div>
           </div>

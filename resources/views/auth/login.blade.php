@@ -51,6 +51,11 @@
                     GitHubアカウントでログイン
                   </div>
                 </a>
+                <a href="{{ url('login/github') }}">
+                  <div class="google-btn">
+                     Googleアカウントでログイン
+                  </div>
+                </a>
               </form>
             </div>
           </div>
